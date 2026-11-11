@@ -1,0 +1,1 @@
+{"status": "error", "rc": 1, "n_errors": 2, "errors": ["snippet.cpp:15:5: error: ‘memcpy’ was not declared in this scope", "snippet.cpp:142:28: error: ‘CURLOPT_USE_TLS’ was not declared in this scope; did you mean ‘CURLOPT_USE_SSL’?"], "cmd": "g++ -std=c++17 -fsyntax-only -x c++ snippet.cpp"}

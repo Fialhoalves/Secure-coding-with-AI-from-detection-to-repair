@@ -1,0 +1,73 @@
+snapshot,issue_number,model,field,value,reason
+v8,39,,is_real,not_real,texto dos autores nega problema de seguranca: 'This is not a security issue' (variante de 'not security issue')
+v8,46,,is_real,not_real,texto dos autores nega problema de seguranca: 'False positive'
+v8,47,,is_real,not_real,texto dos autores nega problema de seguranca: 'False positive'
+v8,65,,is_real,not_real,texto dos autores nega problema de seguranca: 'Doesn?t looks like security issue' (apostrofo corrompido na planilha)
+v8,69,,is_real,not_real,texto dos autores nega problema de seguranca: 'more code quality issue'
+v8,73,,is_real,not_real,"texto dos autores nega problema de seguranca: 'incorrect C++ syntax (CUDA specific)', sem alegar vulnerabilidade"
+v8,74,,is_real,not_real,"texto dos autores nega problema de seguranca: 'incorrect C++ syntax (CUDA specific)', sem alegar vulnerabilidade"
+v8,4,gpt-4.1,detected,yes,texto diz que o modelo identificou o problema
+v8,4,gpt-5,detected,yes,texto diz que o modelo identificou o problema
+v8,4,opus-4.1,detected,yes,texto diz que o modelo identificou o problema
+v8,12,gpt-4.1,detected,yes,texto diz que o modelo identificou o problema
+v8,12,gpt-5,detected,yes,texto diz que o modelo identificou o problema
+v8,13,gpt-4.1,detected,yes,texto diz que o modelo identificou o problema
+v8,13,gpt-5,detected,yes,texto diz que o modelo identificou o problema
+v8,14,gpt-4.1,detected,yes,texto diz que o modelo identificou o problema
+v8,14,gpt-5,detected,yes,texto diz que o modelo identificou o problema
+v8,14,opus-4.1,detected,yes,texto diz que o modelo identificou o problema
+v8,25,gpt-4.1,detected,yes,texto diz que o modelo identificou o problema
+v8,25,gpt-5,detected,yes,texto diz que o modelo identificou o problema
+v8,25,opus-4.1,detected,yes,texto diz que o modelo identificou o problema
+v8,27,gpt-4.1,detected,yes,texto diz que o modelo identificou o problema
+v8,27,gpt-5,detected,yes,texto diz que o modelo identificou o problema
+v8,27,opus-4.1,detected,yes,texto diz que o modelo identificou o problema
+v8,30,gpt-4.1,detected,yes,texto diz que o modelo identificou o problema
+v8,30,gpt-5,detected,yes,texto diz que o modelo identificou o problema
+v8,30,opus-4.1,detected,yes,texto diz que o modelo identificou o problema
+v8,56,gpt-4.1,detected,yes,texto diz que o modelo identificou o problema
+v8,56,gpt-5,detected,yes,texto diz que o modelo identificou o problema
+v8,56,opus-4.1,detected,yes,texto diz que o modelo identificou o problema
+v8,64,gpt-4.1,detected,yes,texto diz que o modelo identificou o problema
+v8,64,gpt-5,detected,yes,texto diz que o modelo identificou o problema
+v8,64,opus-4.1,detected,yes,texto diz que o modelo identificou o problema
+v8,2,opus-4.1,detected,yes,texto diz que o modelo identificou o problema
+v10,23,gpt-4.1,detected,yes,texto diz que o modelo identificou o problema
+v10,23,gpt-5,detected,yes,texto diz que o modelo identificou o problema
+v10,23,opus-4.1,detected,yes,texto diz que o modelo identificou o problema
+v10,24,gpt-4.1,detected,yes,texto diz que o modelo identificou o problema
+v10,24,gpt-5,detected,yes,texto diz que o modelo identificou o problema
+v10,24,opus-4.1,detected,yes,texto diz que o modelo identificou o problema
+v8,19,gpt-4.1,detected,no,texto: 'scanf not recognised as an issue'
+v8,19,opus-4.1,detected,no,texto: 'scanf not recognised as an issue'
+v8,11,opus-4.1,detected,no,"texto: viu CWE-20, mas 'not on line 36'; o artigo lista 8/36 como nao detectada por nenhum modelo"
+v8,13,opus-4.1,fixed,yes,texto descreve a correcao aplicada
+v8,17,gpt-4.1,fixed,yes,texto descreve a correcao aplicada
+v8,17,gpt-5,fixed,yes,texto descreve a correcao aplicada
+v8,17,opus-4.1,fixed,yes,texto descreve a correcao aplicada
+v8,19,gpt-5,fixed,yes,texto descreve a correcao aplicada
+v8,25,opus-4.1,fixed,yes,texto descreve a correcao aplicada
+v8,27,gpt-4.1,fixed,yes,texto descreve a correcao aplicada
+v8,27,gpt-5,fixed,yes,texto descreve a correcao aplicada
+v8,27,opus-4.1,fixed,yes,texto descreve a correcao aplicada
+v8,29,gpt-4.1,fixed,yes,texto descreve a correcao aplicada
+v8,29,gpt-5,fixed,yes,texto descreve a correcao aplicada
+v8,29,opus-4.1,fixed,yes,texto descreve a correcao aplicada
+v8,30,gpt-4.1,fixed,yes,texto descreve a correcao aplicada
+v8,30,gpt-5,fixed,yes,texto descreve a correcao aplicada
+v8,30,opus-4.1,fixed,yes,texto descreve a correcao aplicada
+v8,56,gpt-4.1,fixed,yes,texto descreve a correcao aplicada
+v8,56,opus-4.1,fixed,yes,texto descreve a correcao aplicada
+v8,57,gpt-4.1,fixed,yes,texto descreve a correcao aplicada
+v8,57,gpt-5,fixed,yes,texto descreve a correcao aplicada
+v8,57,opus-4.1,fixed,yes,texto descreve a correcao aplicada
+v8,58,gpt-4.1,fixed,yes,texto descreve a correcao aplicada
+v8,58,gpt-5,fixed,yes,texto descreve a correcao aplicada
+v8,58,opus-4.1,fixed,yes,texto descreve a correcao aplicada
+v8,62,opus-4.1,fixed,yes,texto descreve a correcao aplicada
+v8,64,gpt-5,fixed,yes,texto descreve a correcao aplicada
+v8,1,gpt-5,fixed,yes,"celula da planilha esta corrompida ('& t'); o artigo conta 1/1a como corrigida pelo GPT-5 sem detecao (Apendice B, item 5)"
+v8,20,gpt-5,fixed,no,texto: 'they still use full receiver array as buffer... can be not 0 terminated' (problema persiste)
+v8,31,gpt-4.1,fixed,no,linha julgada nao-problema pelos autores; texto diz que a tentativa piora o codigo / mais complexo
+v8,31,gpt-5,fixed,no,linha julgada nao-problema pelos autores; texto diz que a tentativa piora o codigo / mais complexo
+v8,31,opus-4.1,fixed,no,linha julgada nao-problema pelos autores; texto diz que a tentativa piora o codigo / mais complexo

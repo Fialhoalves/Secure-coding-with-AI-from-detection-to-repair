@@ -1,0 +1,1 @@
+{"status": "error", "rc": 1, "n_errors": 3, "errors": ["snippet.c:22:1: error: unknown type name ‘bool’", "snippet.c:27:16: error: ‘true’ undeclared (first use in this function)", "snippet.c:39:12: error: ‘false’ undeclared (first use in this function)"], "cmd": "gcc -std=c11 -fsyntax-only -x c snippet.c"}

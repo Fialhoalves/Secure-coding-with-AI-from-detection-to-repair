@@ -1,0 +1,1 @@
+{"status": "error", "rc": 1, "n_errors": 2, "errors": ["snippet.c:45:46: error: expected expression before ‘;’ token", "snippet.c:46:35: error: expected expression before ‘;’ token"], "cmd": "gcc -std=c11 -fsyntax-only -x c snippet.c"}

@@ -1,0 +1,1 @@
+{"status": "ok", "rc": 0, "n_errors": 0, "errors": [], "cmd": "gcc -std=c11 -fsyntax-only -x c snippet.c"}

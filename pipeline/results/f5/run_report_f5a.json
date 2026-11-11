@@ -1,0 +1,109 @@
+{
+  "job": {
+    "mode": "pilot",
+    "select": "part:0/2",
+    "reps": [
+      "main"
+    ],
+    "configs": null,
+    "session_hours": 10.0,
+    "tune_detector": false,
+    "pipeline": true,
+    "determinism": false,
+    "fix_validation": false,
+    "verifier_calibration": false,
+    "paper_extraction": false,
+    "extraction_scope": "all",
+    "archive": true,
+    "limit_cases": null,
+    "limit_extraction_files": null,
+    "workers": null,
+    "rehearsal_model": "qwen2.5-coder:0.5b"
+  },
+  "stages": {
+    "pipeline": {
+      "ok": true,
+      "seconds": 20198.4,
+      "result": {
+        "reps": {
+          "main": {
+            "done": 57,
+            "errors": [],
+            "stopped_by_quota_guard": false,
+            "pending_left": 0
+          }
+        },
+        "llm": {
+          "calls": 509,
+          "cache_hits": 10,
+          "schema_failures": 1,
+          "refusals": 0,
+          "errors": 3
+        },
+        "cache_entries": 856,
+        "session_hours": 5.612
+      }
+    }
+  },
+  "ollama_version": "Warning: could not connect to a running Ollama instance\nWarning: client version is 0.40.16",
+  "models": {
+    "detector": {
+      "name": "qwen2.5-coder:14b",
+      "digest": "9ec8897f747e246e970bc5cfdda85d22f1123dc2e3d34978a010a75968716849",
+      "size": 8988124298,
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen2",
+        "families": [
+          "qwen2"
+        ],
+        "parameter_size": "14.8B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 32768,
+        "embedding_length": 5120,
+        "runner": "ggml"
+      }
+    },
+    "verifier": {
+      "name": "gpt-oss:20b",
+      "digest": "f38aa0c53da5f8c49d08c43a99df24ff53167fe68e24664a7777288e7656fdfe",
+      "size": 13793441566,
+      "details": {
+        "parent_model": "dhiltgen/gpt-oss:20b-llamacpp",
+        "format": "gguf",
+        "family": "gpt-oss",
+        "families": [
+          "gpt-oss"
+        ],
+        "parameter_size": "20.9B",
+        "quantization_level": "MXFP4",
+        "context_length": 131072,
+        "embedding_length": 2880,
+        "runner": "llamacpp"
+      }
+    }
+  },
+  "warm_seconds": {
+    "detector": 160.4,
+    "verifier": 88.8
+  },
+  "fits_on_gpu": {
+    "detector": [
+      true,
+      {
+        "size": 11909086575,
+        "size_vram": 11909086575
+      }
+    ],
+    "verifier": [
+      true,
+      {
+        "size": 12808827698,
+        "size_vram": 12808827698
+      }
+    ]
+  },
+  "session_hours": 5.612,
+  "t_total_s": 20901.3
+}

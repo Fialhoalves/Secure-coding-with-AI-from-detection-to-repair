@@ -1,0 +1,1 @@
+{"status": "error", "rc": 1, "n_errors": 1, "errors": ["snippet.cpp:2:1: error: ‘size_t’ does not name a type"], "cmd": "g++ -std=c++17 -fsyntax-only -x c++ snippet.cpp"}

@@ -1,0 +1,1 @@
+{"status": "error", "rc": 1, "n_errors": 3, "errors": ["snippet.c:1:1: error: expected identifier or ‘(’ before ‘while’", "snippet.c:12:18: error: missing terminating ' character", "snippet.c:13:1: error: missing terminating ' character"], "cmd": "gcc -std=c11 -fsyntax-only -x c snippet.c"}

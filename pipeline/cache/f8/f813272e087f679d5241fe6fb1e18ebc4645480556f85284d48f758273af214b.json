@@ -1,0 +1,1 @@
+{"status": "error", "rc": 1, "n_errors": 3, "errors": ["snippet.c:9:15: error: missing terminating \" character", "snippet.c:9:5: error: expected expression at end of input", "snippet.c:9:5: error: expected declaration or statement at end of input"], "cmd": "gcc -std=c11 -fsyntax-only -x c snippet.c"}

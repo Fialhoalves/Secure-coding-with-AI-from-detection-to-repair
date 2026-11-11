@@ -1,0 +1,1 @@
+{"status": "ok", "available": {"flawfinder": true, "cppcheck": true, "semgrep": true}, "findings": [{"scanner": "cppcheck", "line": 27, "severity": "note", "rule": "truncLongCastAssignment", "cwe": [197], "message": "int result is assigned to long long variable. If the variable is long long to avoid loss of information, then you have loss of information."}], "errors": {}}

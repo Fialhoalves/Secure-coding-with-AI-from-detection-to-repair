@@ -1,0 +1,1 @@
+{"status": "error", "rc": 1, "n_errors": 1, "errors": ["snippet.c:8:10: fatal error: cursor.h: No such file or directory"], "cmd": "gcc -std=c11 -fsyntax-only -x c snippet.c"}

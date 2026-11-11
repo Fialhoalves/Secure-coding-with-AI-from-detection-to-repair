@@ -1,0 +1,1 @@
+{"status": "ok", "available": {"flawfinder": true, "cppcheck": true, "semgrep": true}, "findings": [{"scanner": "cppcheck", "line": 18, "severity": "error", "rule": "syntaxError", "cwe": [0], "message": "Unmatched '{'. Configuration: ''."}], "errors": {}}

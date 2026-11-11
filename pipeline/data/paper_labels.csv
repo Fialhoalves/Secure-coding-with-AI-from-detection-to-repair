@@ -1,0 +1,427 @@
+issue_id,snapshot,file_number,issue_number,status,model,cwe_identified_raw,cwe_identified,detected,detected_sheet,detected_paper,detected_source,detected_conflict,detected_raw,fixed,fixed_sheet,fixed_paper,fixed_source,fixed_conflict,fixed_raw
+v8:1/1a,v8,1,1,real,gpt-4.1,"CWE-732, CWE-367, CWE-273, CWE-775, CWE-610",732|367|273|775|610,True,True,True,artigo,,"Yes, resource leak is detected as CWE-775",True,True,True,artigo,,"Yes, file closed"
+v8:1/1a,v8,1,1,real,gpt-5,"CWE-403, CWE-59, CWE-703",403|59|703,False,False,False,artigo,,"No, this issues was not spotted.",True,True,True,artigo,,& t
+v8:1/1a,v8,1,1,real,opus-4.1,"CWE-367, CWE-732, CWE-362, CWE-403, CWE-252, CWE-22",367|732|362|403|252|22,False,False,False,artigo,,"No, file descriptor leak not reported",True,True,True,artigo,,"Yes, Is fixed"
+v8:1/1b,v8,1,2,real,gpt-4.1,,,True,True,True,artigo,,"Yes, risk of redirection identified as CWE-610",True,True,True,artigo,,"Yes, check that this is char device is added"
+v8:1/1b,v8,1,2,real,gpt-5,,,True,True,True,artigo,,Yes redirection threat was identified as CWE-59,True,True,True,artigo,,"Yes, new code ensure that the opened target is a character device"
+v8:1/1b,v8,1,2,real,opus-4.1,,,True,True,True,artigo,,Hardcoded path without validation identified as CWE-22,True,True,True,artigo,,"Yes, new code ensure that the opened target is a character device"
+v8:2/14,v8,2,3,divergent,gpt-4.1,,,,,,,,,,,,,,
+v8:2/14,v8,2,3,divergent,gpt-5,,,,,,,,,,,,,,
+v8:2/14,v8,2,3,divergent,opus-4.1,,,,,,,,,,,,,,
+v8:3/29,v8,3,4,real,gpt-4.1,"CWE-20, CWE-78, CWE-119, CWE-404, CWE-200, CWE-327",20|78|119|404|200|327,True,True,True,artigo,,CWE-20 input validation identified,True,True,True,artigo,,"yes, range check for year, and regex validation for country code"
+v8:3/29,v8,3,4,real,gpt-5,"CWE-590, CWE-772, CWE-476, CWE-400, CWE-20, CWE-295, CWE-611",590|772|476|400|20|295|611,True,True,True,artigo,,CWE-20 input validation identified,True,True,True,artigo,,"yes, range check for year, and regex validation for country code"
+v8:3/29,v8,3,4,real,opus-4.1,"CWE-20, CWE-295, CWE-416, CWE-401, CWE-476, CWE-918",20|295|416|401|476|918,True,True,True,artigo,,CWE-20 input validation identified,True,True,True,artigo,,"yes, range check for year, and regex validation for country code"
+v8:4/21,v8,4,5,known_fp,gpt-4.1,"CWE-120, CWE-20, CWE-676, CWE-362, CWE-252, CWE-404, CWE-134",120|20|676|362|252|404|134,,,,,,,,,,,,
+v8:4/21,v8,4,5,known_fp,gpt-5,"CWE-787, CWE-113, CWE-20, CWE-404, CWE-772",787|113|20|404|772,,,,,,,,,,,,
+v8:4/21,v8,4,5,known_fp,opus-4.1,"CWE-134, CWE-120, CWE-22, CWE-190, CWE-400, CWE-20, CWE-200",134|120|22|190|400|20|200,,,,,,,,,,,,
+v8:4/101,v8,4,6,real,gpt-4.1,,,False,False,False,artigo,,"no, it was able to detect issue with validation but only for argv[1] and argv[2] not for argv[3]",False,False,False,artigo,,"no, not fixed"
+v8:4/101,v8,4,6,real,gpt-5,,,False,False,False,artigo,,"no, issue with argv[3] is not detected",False,False,False,artigo,,"no, not fixed"
+v8:4/101,v8,4,6,real,opus-4.1,,,True,True,True,artigo,,"Yes, it is spotted issue with word_list path",False,False,False,artigo,,"no, not fixed"
+v8:5/63,v8,5,7,real,gpt-4.1,"CWE-73, CWE-22, CWE-20, CWE-209",73|22|20|209,True,True,True,artigo,,"Yes, issue with roundFilePath Identified as CWE-22",True,True,True,artigo,,"Yes, regex validation for file name entered from console"
+v8:5/63,v8,5,7,real,gpt-5,"CWE-22, CWE-73, CWE-426, CWE-200, CWE-248",22|73|426|200|248,True,True,True,artigo,,"Yes, issue with roundFilePath Identified as CWE-22/CWe-73",True,True,True,artigo,,"Yes, new method added to verify input"
+v8:5/63,v8,5,7,real,opus-4.1,"CWE-22, CWE-73, CWE-209, CWE-20, CWE-798",22|73|209|20|798,True,True,True,artigo,,"Yes, issue with roundFilePath Identified as CWE-22",True,True,True,artigo,,"Yes, helper methods added to validate path"
+v8:6/8,v8,6,8,real,gpt-4.1,"CWE-20, CWE-190, CWE-606, CWE-682",20|190|606|682,True,True,True,artigo,,"Yes, CWE-190 identified",True,True,True,artigo,,"Yes, extra helper methods added to do safe multiplication"
+v8:6/8,v8,6,8,real,gpt-5,"CWE-252, CWE-20, CWE-369, CWE-190, CWE-682, CWE-400",252|20|369|190|682|400,True,True,True,artigo,,"Yes, CWE-190 identified",True,True,True,artigo,,"Yes, extra helper methods added to do safe multiplication"
+v8:6/8,v8,6,8,real,opus-4.1,"CWE-190, CWE-369, CWE-20, CWE-834",190|369|20|834,True,True,True,artigo,,"Yes, CWE-190 identified",True,True,True,artigo,,"Yes, multplication validation added to main method"
+v8:7/39,v8,7,9,real,gpt-4.1,"CWE-762, CWE-20, CWE-704, CWE-120, CWE-401, CWE-73",762|20|704|120|401|73,True,True,True,artigo,,"Yes, unvalidated input identified, CWE-20",True,True,True,artigo,,"Yes, code to load file and read numeric valued refactored to validate input."
+v8:7/39,v8,7,9,real,gpt-5,"CWE-252, CWE-20, CWE-690, CWE-665, CWE-754, CWE-190, CWE-73",252|20|690|665|754|190|73,True,True,True,artigo,,"Yes, unvalidated input identified, CWE-20",True,True,True,artigo,,"Yes, file input validation added"
+v8:7/39,v8,7,9,real,opus-4.1,,,True,True,True,artigo,,"Yes, unvalidated input identified, CWE-20",True,True,True,artigo,,"Yes, code to load file and read numeric valued refactored to validate input."
+v8:8/14,v8,8,10,known_fp,gpt-4.1,"CWE-78, CWE-20, CWE-119, CWE-134, CWE-200, CWE-319, CWE-170, CWE-78, CWE-22, CWE-252, CWE-242, CWE-767",78|20|119|134|200|319|170|22|252|242|767,,,,,,,,,,,,
+v8:8/14,v8,8,10,known_fp,gpt-5,"CWE-787, CWE-20, CWE-113, CWE-252, CWE-400",787|20|113|252|400,,,,,,,,,,,,
+v8:8/14,v8,8,10,known_fp,opus-4.1,"CWE-121, CWE-20, CWE-22, CWE-113, CWE-252, CWE-404, CWE-835",121|20|22|113|252|404|835,,,,,,,,,,,,
+v8:8/36,v8,8,11,real,gpt-4.1,,,False,True,False,artigo,difere,"Yes, unvalidated input identified, CWE-20 for port, but not for wordlist_path",False,False,False,artigo,,"no, not fixed"
+v8:8/36,v8,8,11,real,gpt-5,,,False,True,False,artigo,difere,"Yes, unvalidated input identified, CWE-20 for port, but not for wordlist_path",False,False,False,artigo,,"no, not fixed"
+v8:8/36,v8,8,11,real,opus-4.1,,,False,False,False,artigo,,"it see CWE-20 as problem, but not on line 36. wordlist_path is not a problem for this LLM",False,False,False,artigo,,"no, not fixed"
+v8:9/9,v8,9,12,real,gpt-4.1,"CWE-190, CWE-252, CWE-20, CWE-134",190|252|20|134,True,True,True,artigo,,Potential risk of using scanf() was identified CWE-20 assigned,True,True,True,artigo,,"Yes, it is refactored to use fgets()"
+v8:9/9,v8,9,12,real,gpt-5,"CWE-20, CWE-190",20|190,True,True,True,artigo,,Potential risk of using Scanf() was identified CWE-20 assigned,True,True,True,artigo,,"Yes, it is refactored to use fgets() and validation after"
+v8:9/9,v8,9,12,real,opus-4.1,"CWE-457, CWE-20, CWE-252",457|20|252,False,False,False,artigo,,"No, I can’t see issue with sscanf",False,False,False,artigo,,"No, scanf() still is user with the same parameters"
+v8:10/18,v8,10,13,known_fp,gpt-4.1,"CWE-119, CWE-676, CWE-20, CWE-327, CWE-416",119|676|20|327|416,True,True,,planilha,,CWE-119 was assigned and identified. In general memcpy() drew attention of GTP4.,True,True,,planilha,,"Yes, it fixed, without updates in EmailData()"
+v8:10/18,v8,10,13,known_fp,gpt-5,"CWE-319, CWE-295, CWE-190, CWE-680, CWE-252, CWE-532, CWE-400",319|295|190|680|252|532|400,True,True,,planilha,,Identified issue with overflow when calculating size of buffer for memcpy() CWE-190/CWE-680,True,True,,planilha,,"Yes, code added to avoid overflow"
+v8:10/18,v8,10,13,known_fp,opus-4.1,"CWE-311, CWE-404, CWE-665, CWE-252, CWE-476",311|404|665|252|476,False,False,,planilha,,"No, issue not detected.",True,True,,planilha,,Code added to avoid overflow when buffer size check for memcpy. EmailData structure extended.
+v8:10/42,v8,10,14,real,gpt-4.1,,,True,True,True,artigo,,Risk of using HTTP identified as CWE-327,True,True,True,artigo,,"Yes, url changed to use https"
+v8:10/42,v8,10,14,real,gpt-5,,,True,True,True,artigo,,Risk of using HTTP identified as CWE-319,True,True,True,artigo,,"Yes, url changed to use https"
+v8:10/42,v8,10,14,real,opus-4.1,,,True,True,True,artigo,,Risk of using HTTP identified as CWE-311,True,True,True,artigo,,"Yes, url changed to use https"
+v8:11/40,v8,11,15,real,gpt-4.1,"CWE-22, CWE-338, CWE-400",22|338|400,True,True,True,artigo,,"Yes, issue with filePath argument detected, CWE-22",True,True,True,artigo,,"Yes, Issue fixed, argument validation added"
+v8:11/40,v8,11,15,real,gpt-5,"CWE-22, CWE-23, CWE-73, CWE-59, CWE-367, CWE-338, CWE-1236",22|23|73|59|367|338|1236,True,True,True,artigo,,"Yes, issue with filePath argument detected, CWE-22",True,True,True,artigo,,"Yes, Issue fixed, argument validation added"
+v8:11/40,v8,11,15,real,opus-4.1,"CWE-22, CWE-400, CWE-20, CWE-755, CWE-1236",22|400|20|755|1236,True,True,True,artigo,,"Yes, issue with filePath argument detected, CWE-22",True,True,True,artigo,,"Yes, Issue fixed, argument validation added"
+v8:12/35,v8,12,16,known_fp,gpt-4.1,"CWE-252, CWE-20, CWE-197, CWE-835",252|20|197|835,,,,,,,,,,,,
+v8:12/35,v8,12,16,known_fp,gpt-5,"CWE-20, CWE-252, CWE-190, CWE-758. CWE-345, CWE-319",20|252|190|758|345|319,,,,,,,,,,,,
+v8:12/35,v8,12,16,known_fp,opus-4.1,"CWE-252, CWE-20, CWE-835, CWE-134, CWE-401, CWE-362",252|20|835|134|401|362,,,,,,,,,,,,
+v8:12/36,v8,12,17,real,gpt-4.1,,,True,True,True,artigo,,"Yes, CWE-20 scanf() usege identified",True,True,True,artigo,,scanf() replaces with fgets() with validation
+v8:12/36,v8,12,17,real,gpt-5,,,True,True,True,artigo,,"Yes, CWE-20 scanf() usege identified",True,True,True,artigo,,simple scanf() call replaced with special method which use fgets() and validate input inside
+v8:12/36,v8,12,17,real,opus-4.1,,,True,True,True,artigo,,"Yes, CWE-20 scanf() usege identified",True,True,True,artigo,,scanf() replaces with fgets() with validation
+v8:13/37,v8,13,18,known_fp,gpt-4.1,"CWE-252, CWE-119, CWE-835, CWE-134, CWE-457, CWE-20, CWE-200",252|119|835|134|457|20|200,,,,,,,,,,,,
+v8:13/37,v8,13,18,known_fp,gpt-5,"CWE-252, CWE-457, CWE-665, CWE-20, CWE-686, CWE-190, CWE-400",252|457|665|20|686|190|400,,,,,,,,,,,,
+v8:13/37,v8,13,18,known_fp,opus-4.1,"CWE-252, CWE-20, CWE-665, CWE-134, CWE-401, CWE-835",252|20|665|134|401|835,,,,,,,,,,,,
+v8:13/49,v8,13,19,real,gpt-4.1,,,False,False,False,artigo,,scanf not recognised as an issue,False,False,False,artigo,,"No, scanf() usage unmodified"
+v8:13/49,v8,13,19,real,gpt-5,,,True,True,True,artigo,,"Yes, CWE-20 scanf() usege identified",True,True,True,artigo,,simple scanf() call replaced with special method which use fgets() and validate input inside
+v8:13/49,v8,13,19,real,opus-4.1,,,False,False,False,artigo,,scanf not recognised as an issue,False,False,False,artigo,,"No, scanf() usage unmodified"
+v8:14/14,v8,14,20,real,gpt-4.1,"CWE-120, CWE-20, CWE-200, CWE-362, CWE-131",120|20|200|362|131,True,True,True,artigo,,"Yes, CWE-120 and potential buffer overflow risk identified",False,False,False,artigo,,"No, not fxed"
+v8:14/14,v8,14,20,real,gpt-5,"CWE-306, CWE-346, CWE-319, CWE-400, CWE-20",306|346|319|400|20,False,False,False,artigo,,No it potential buffer overflow not identified,False,False,False,artigo,,they still use full receiver array as buffer and it means that array can be not 0 terminated.
+v8:14/14,v8,14,20,real,opus-4.1,"CWE-119, CWE-20, CWE-401, CWE-252, CWE-200",119|20|401|252|200,True,True,True,artigo,,"Yes, potential buffer overflow risk identified as CWE-119",True,True,True,artigo,,"yes, they null terminate buffer after recevie"
+v8:14/63,v8,14,21,real,gpt-4.1,,,False,False,False,artigo,,No issue identified with strcspn() use for array index.,False,False,False,artigo,,"No, not fxed"
+v8:14/63,v8,14,21,real,gpt-5,,,False,False,False,artigo,,No issue identified with strcspn() use for array index. CWE-129 not detected.,False,False,False,artigo,,"No, it is still not fixed, strcspn() is stil used and tx_buf still can be not property terminated."
+v8:14/63,v8,14,21,real,opus-4.1,,,False,False,False,artigo,,No issue identified with strcspn() use for array index.,False,False,False,artigo,,"No, they still use console entered data to set data in array."
+v8:15/17,v8,15,22,known_fp,gpt-4.1,"CWE-120, CWE-787, CWE-457",120|787|457,,,,,,,,,,,,
+v8:15/17,v8,15,22,known_fp,gpt-5,"CWE-457, CWE-120, CWE-119, CWE-131",457|120|119|131,,,,,,,,,,,,
+v8:15/17,v8,15,22,known_fp,opus-4.1,"CWE-457, CWE-120, CWE-787, CWE-824",457|120|787|824,,,,,,,,,,,,
+v8:16/1,v8,16,23,known_fp,gpt-4.1,"CWE-134, CWE-532",134|532,,,,,,,,,,,,
+v8:16/1,v8,16,23,known_fp,gpt-5,"CWE-134, CWE-117, CWE-532, CWE-209, CWE-252",134|117|532|209|252,,,,,,,,,,,,
+v8:16/1,v8,16,23,known_fp,opus-4.1,"CWE-134, CWE-209, CWE-252, CWE-400",134|209|252|400,,,,,,,,,,,,
+v8:17/1,v8,17,24,known_fp,gpt-4.1,"CWE-532, CWE-778, CWE-134",532|778|134,,,,,,,,,,,,
+v8:17/1,v8,17,24,known_fp,gpt-5,"CWE-532, CWE-134, CWE-117, CWE-400, CWE-770",532|134|117|400|770,,,,,,,,,,,,
+v8:17/1,v8,17,24,known_fp,opus-4.1,CWE-134,134,,,,,,,,,,,,
+v8:18/83,v8,18,25,real,gpt-4.1,"CWE-131, CWE-190, CWE-681, CWE-252, CWE-457, CWE-120, CWE-401",131|190|681|252|457|120|401,True,True,True,artigo,,"CWE-120 related to memcpy detected, potential overflow.",True,True,True,artigo,,"Yes, Cast to size_t and calculating buffer. This fix the problem on 64 bit platform but not on 32 bit platform."
+v8:18/83,v8,18,25,real,gpt-5,"CWE-369, CWE-190, CWE-787, CWE-788, CWE-476, CWE-252, CWE-665",369|190|787|788|476|252|665,True,True,True,artigo,,Potential issue with memcpy and buffer overflow detected as CWE-190,True,True,True,artigo,,"Yes fixed, memcpy() replaced with memmove(). size_t used everywhere for size calculation. it again assume 64 bit platform."
+v8:18/83,v8,18,25,real,opus-4.1,"CWE-190, CWE-476, CWE-369, CWE-129, CWE-401, CWE-362",190|476|369|129|401|362,True,True,True,artigo,,Potential issue with memcpy and buffer overflow detected as CWE-190,True,True,True,artigo,,size_t for buffer size calculation and even helper safe_buffer_offset() created to calculate buffer size safely.
+v8:19/86,v8,19,26,known_fp,gpt-4.1,"CWE-252, CWE-362, CWE-617",252|362|617,,,,,,,,,,,,
+v8:19/86,v8,19,26,known_fp,gpt-5,"CWE-617, CWE-252, CWE-562, CWE-416, CWE-664, CWE-457, CWE-833",617|252|562|416|664|457|833,,,,,,,,,,,,
+v8:19/86,v8,19,26,known_fp,opus-4.1,"CWE-676, CWE-362, CWE-252, CWE-415, CWE-704",676|362|252|415|704,,,,,,,,,,,,
+v8:20/16,v8,20,27,real,gpt-4.1,CWE-78,78,True,True,True,artigo,,Risk of using std::system() CWE-78 was identified.,True,True,True,artigo,,"fixed, system() not in use."
+v8:20/16,v8,20,27,real,gpt-5,"CWE-78, CWE-88, CWE-426, CWE-20, CWE-117",78|88|426|20|117,True,True,True,artigo,,Risk of using std::system() CWE-78 was identified.,True,True,True,artigo,,"fixed, system() not in use."
+v8:20/16,v8,20,27,real,opus-4.1,"CWE-78, CWE-20, CWE-88",78|20|88,True,True,True,artigo,,Risk of using std::system() CWE-78 was identified.,True,True,True,artigo,,"fixed, system() not in use."
+v8:21/10,v8,21,28,known_fp,gpt-4.1,CWE-134 potential,134,,,,,,,,,,,,
+v8:21/10,v8,21,28,known_fp,gpt-5,"CWE-208, CWE-125, CWE-209",208|125|209,,,,,,,,,,,,
+v8:21/10,v8,21,28,known_fp,opus-4.1,-,,,,,,,,,,,,,
+v8:22/7,v8,22,29,real,gpt-4.1,"CWE-20, CWE-190, CWE-665, CWE-676, CWE-369",20|190|665|676|369,True,True,True,artigo,,Yes issue with user input without validation spotted. CWE-120,True,True,True,artigo,,"Issue fixed, safe_read_int() method added."
+v8:22/7,v8,22,29,real,gpt-5,"CWE-369, CWE-190, CWE-758, CWE-789, CWE-400, CWE-457",369|190|758|789|400|457,True,True,True,artigo,,Yes issue with user input without validation spotted. CWE-120,True,True,True,artigo,,"Issue fixed, input validation added."
+v8:22/7,v8,22,29,real,opus-4.1,"CWE-1284, CWE-369, CWE-190, CWE-703, CWE-676",1284|369|190|703|676,True,True,True,artigo,,Yes issue with user input without validation spotted. CWE-120,True,True,True,artigo,,"Issue fixed, input validation added."
+v8:23/9,v8,23,30,real,gpt-4.1,"CWE-120, CWE-134, CWE-170, CWE-131, CWE-20, CWE-400",120|134|170|131|20|400,True,True,True,artigo,,"Problem identified, CWE-120",True,True,True,artigo,,get_line() updated to be more robust. Protection against unitialized ‘c’ variable.
+v8:23/9,v8,23,30,real,gpt-5,"CWE-457, CWE-150",457|150,True,True,True,artigo,,Problem with get_line() identified as CWE-457,True,True,True,artigo,,get_line() updated to be more robust. Unitialized variable c was initialized.
+v8:23/9,v8,23,30,real,opus-4.1,CWE-120,120,True,True,True,artigo,,"Problem identified, CWE-120",True,True,True,artigo,,get_line() updated to be more robust. Protection against unitialized ‘c’ variable.
+v8:24/26,v8,24,31,known_fp,gpt-4.1,"CWE-798, CWE-824, CWE-252, CWE-200",798|824|252|200,,,,,,,False,False,,planilha,,Attemt to fix this line makes code even worse.
+v8:24/26,v8,24,31,known_fp,gpt-5,"CWE-476, CWE-401, CWE-252/CWE-703, CWE-665/CWE-393/CWE-703",476|401|252|703|665|393,,,,,,,False,False,,planilha,,Code is much more complex
+v8:24/26,v8,24,31,known_fp,opus-4.1,"CWE-824, CWE-20, CWE-404, CWE-476, CWE-665",824|20|404|476|665,,,,,,,False,False,,planilha,,Code is much more complex
+v8:25/9,v8,25,32,known_fp,gpt-4.1,"CWE-252, CWE-391, CWE-704, CWE-843",252|391|704|843,,,,,,,,,,,,
+v8:25/9,v8,25,32,known_fp,gpt-5,"CWE-252, CWE-476, CWE-704, CWE-20",252|476|704|20,,,,,,,,,,,,
+v8:25/9,v8,25,32,known_fp,opus-4.1,"CWE-704, CWE-252, CWE-476, CWE-391, CWE-20",704|252|476|391|20,,,,,,,,,,,,
+v8:26/4,v8,26,33,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v8:26/4,v8,26,33,known_fp,gpt-5,,,,,,,,,,,,,,
+v8:26/4,v8,26,33,known_fp,opus-4.1,,,,,,,,,,,,,,
+v8:27/4,v8,27,34,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v8:27/4,v8,27,34,known_fp,gpt-5,,,,,,,,,,,,,,
+v8:27/4,v8,27,34,known_fp,opus-4.1,,,,,,,,,,,,,,
+v8:28/4,v8,28,35,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v8:28/4,v8,28,35,known_fp,gpt-5,,,,,,,,,,,,,,
+v8:28/4,v8,28,35,known_fp,opus-4.1,,,,,,,,,,,,,,
+v8:29/4,v8,29,36,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v8:29/4,v8,29,36,known_fp,gpt-5,,,,,,,,,,,,,,
+v8:29/4,v8,29,36,known_fp,opus-4.1,,,,,,,,,,,,,,
+v8:30/4,v8,30,37,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v8:30/4,v8,30,37,known_fp,gpt-5,,,,,,,,,,,,,,
+v8:30/4,v8,30,37,known_fp,opus-4.1,,,,,,,,,,,,,,
+v8:31/35,v8,31,38,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v8:31/35,v8,31,38,known_fp,gpt-5,,,,,,,,,,,,,,
+v8:31/35,v8,31,38,known_fp,opus-4.1,,,,,,,,,,,,,,
+v8:32/10,v8,32,39,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v8:32/10,v8,32,39,known_fp,gpt-5,,,,,,,,,,,,,,
+v8:32/10,v8,32,39,known_fp,opus-4.1,,,,,,,,,,,,,,
+v8:33/14,v8,33,40,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v8:33/14,v8,33,40,known_fp,gpt-5,,,,,,,,,,,,,,
+v8:33/14,v8,33,40,known_fp,opus-4.1,,,,,,,,,,,,,,
+v8:34/1,v8,34,41,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v8:34/1,v8,34,41,known_fp,gpt-5,,,,,,,,,,,,,,
+v8:34/1,v8,34,41,known_fp,opus-4.1,,,,,,,,,,,,,,
+v8:35/56,v8,35,42,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v8:35/56,v8,35,42,known_fp,gpt-5,,,,,,,,,,,,,,
+v8:35/56,v8,35,42,known_fp,opus-4.1,,,,,,,,,,,,,,
+v8:36/13,v8,36,43,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v8:36/13,v8,36,43,known_fp,gpt-5,,,,,,,,,,,,,,
+v8:36/13,v8,36,43,known_fp,opus-4.1,,,,,,,,,,,,,,
+v8:37/8,v8,37,44,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v8:37/8,v8,37,44,known_fp,gpt-5,,,,,,,,,,,,,,
+v8:37/8,v8,37,44,known_fp,opus-4.1,,,,,,,,,,,,,,
+v8:38/20,v8,38,45,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v8:38/20,v8,38,45,known_fp,gpt-5,,,,,,,,,,,,,,
+v8:38/20,v8,38,45,known_fp,opus-4.1,,,,,,,,,,,,,,
+v8:39/25,v8,39,46,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v8:39/25,v8,39,46,known_fp,gpt-5,,,,,,,,,,,,,,
+v8:39/25,v8,39,46,known_fp,opus-4.1,,,,,,,,,,,,,,
+v8:39/27,v8,39,47,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v8:39/27,v8,39,47,known_fp,gpt-5,,,,,,,,,,,,,,
+v8:39/27,v8,39,47,known_fp,opus-4.1,,,,,,,,,,,,,,
+v8:40/19,v8,40,48,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v8:40/19,v8,40,48,known_fp,gpt-5,,,,,,,,,,,,,,
+v8:40/19,v8,40,48,known_fp,opus-4.1,,,,,,,,,,,,,,
+v8:41/1,v8,41,49,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v8:41/1,v8,41,49,known_fp,gpt-5,,,,,,,,,,,,,,
+v8:41/1,v8,41,49,known_fp,opus-4.1,,,,,,,,,,,,,,
+v8:42/9,v8,42,50,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v8:42/9,v8,42,50,known_fp,gpt-5,,,,,,,,,,,,,,
+v8:42/9,v8,42,50,known_fp,opus-4.1,,,,,,,,,,,,,,
+v8:43/4,v8,43,51,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v8:43/4,v8,43,51,known_fp,gpt-5,,,,,,,,,,,,,,
+v8:43/4,v8,43,51,known_fp,opus-4.1,,,,,,,,,,,,,,
+v8:44/71,v8,44,52,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v8:44/71,v8,44,52,known_fp,gpt-5,,,,,,,,,,,,,,
+v8:44/71,v8,44,52,known_fp,opus-4.1,,,,,,,,,,,,,,
+v8:45/12,v8,45,53,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v8:45/12,v8,45,53,known_fp,gpt-5,,,,,,,,,,,,,,
+v8:45/12,v8,45,53,known_fp,opus-4.1,,,,,,,,,,,,,,
+v8:46/26,v8,46,54,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v8:46/26,v8,46,54,known_fp,gpt-5,,,,,,,,,,,,,,
+v8:46/26,v8,46,54,known_fp,opus-4.1,,,,,,,,,,,,,,
+v8:47/9,v8,47,55,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v8:47/9,v8,47,55,known_fp,gpt-5,,,,,,,,,,,,,,
+v8:47/9,v8,47,55,known_fp,opus-4.1,,,,,,,,,,,,,,
+v8:48/23,v8,48,56,real,gpt-4.1,"CWE-798, CWE-20, CWE-703, CWE-532, CWE-285",798|20|703|532|285,True,True,True,artigo,,Issue with hardcoded portname spotted. CWE-798,True,True,True,artigo,,"Issue fixed. Port name is not hardcoded, and loaded from config file."
+v8:48/23,v8,48,56,real,gpt-5,"CWE-770, CWE-400, CWE-703, CWE-209",770|400|703|209,True,True,True,artigo,,Issue with hardcoded portname spotted. No CWE assigned for this issue.,True,,True,artigo,planilha_sem_rotulo_claro,There is attempt to fix it. Special method added to select port name from serial ports which are physically available. But port name not passed as parameter to ctor.
+v8:48/23,v8,48,56,real,opus-4.1,"CWE-1188, CWE-20, CWE-400, CWE-703, CWE-391",1188|20|400|703|391,True,True,True,artigo,,Issue with hardcoded portname spotted. CWE-1188,True,True,True,artigo,,Port name is parameter for SerialPortReader class ctor. Special utility method to validate port name added.
+v8:49/27,v8,49,57,real,gpt-4.1,"CWE-73, CWE-676, CWE-532, CWE-772, CWE-362",73|676|532|772|362,True,True,True,artigo,,"Yes, this issue detected as CWE-676 Usage of potential danger function.",True,True,True,artigo,,std::asctime replaced with std::put_time
+v8:49/27,v8,49,57,real,gpt-5,"CWE-117, CWE-362, CWE-73, CWE-22, CWE-59, CWE-276, CWE-200",117|362|73|22|59|276|200,True,True,True,artigo,,"Yes, this issue detected as CWE-676 Usage of potential danger function.",True,True,True,artigo,,std::asctime replaced with std::put_time
+v8:49/27,v8,49,57,real,opus-4.1,"CWE-367, CWE-22, CWE-404, CWE-209, CWE-476",367|22|404|209|476,True,True,True,artigo,,"Yes, this issue detected as CWE-367 Usage of potential danger function.",True,True,True,artigo,,std::asctime replaced with std::put_time
+v8:49/9,v8,49,58,real,gpt-4.1,,,True,True,True,artigo,,"Yes, this issue detected as CWE-59.",True,True,True,artigo,,Filename validated using regex
+v8:49/9,v8,49,58,real,gpt-5,,,True,True,True,artigo,,"Yes, this issue detected as CWE-59.",True,True,True,artigo,,Extra method added to validated log file name.
+v8:49/9,v8,49,58,real,opus-4.1,,,True,True,True,artigo,,"Yes, this issue detected as CWE-22",True,True,True,artigo,,sanitizeFilename()method added to check filename.
+v8:50/6,v8,50,59,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v8:50/6,v8,50,59,known_fp,gpt-5,,,,,,,,,,,,,,
+v8:50/6,v8,50,59,known_fp,opus-4.1,,,,,,,,,,,,,,
+v8:51/7,v8,51,60,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v8:51/7,v8,51,60,known_fp,gpt-5,,,,,,,,,,,,,,
+v8:51/7,v8,51,60,known_fp,opus-4.1,,,,,,,,,,,,,,
+v8:52/14,v8,52,61,real,gpt-4.1,"CWE-120, CWE-20, CWE-200, CWE-252, CWE-259, CWE-400",120|20|200|252|259|400,True,True,True,artigo,,"Yes, detected as CWE-120.",False,False,False,artigo,,"No, not fxed"
+v8:52/14,v8,52,61,real,gpt-5,"CWE-300/CWE-940, CWE-20, CWE-400, CWE-319, CWE-547",300|940|20|400|319|547,False,False,False,artigo,,"No, not detected",False,False,False,artigo,,"No, not fxed"
+v8:52/14,v8,52,61,real,opus-4.1,"CWE-120, CWE-134, CWE-20, CWE-297",120|134|20|297,True,True,True,artigo,,"Yes, issue with receive buffer detected as CWE-120.",True,,True,artigo,planilha_sem_rotulo_claro,Buffers still fix sized but there was attempt to fix. Now two separate buffers for receive and transmit.
+v8:52/42,v8,52,62,real,gpt-4.1,,,False,False,False,artigo,,"No, not detected",False,False,False,artigo,,"No, not fxed"
+v8:52/42,v8,52,62,real,gpt-5,,,False,False,False,artigo,,"No, not detected",False,False,False,artigo,,"No, not fxed"
+v8:52/42,v8,52,62,real,opus-4.1,,,False,False,False,artigo,,"No, not detected",True,True,True,artigo,,Issue fixed without explanations.
+v8:53/13,v8,53,63,real,gpt-4.1,"CWE-22, CWE-625, CWE-248, CWE-209, CWE-400",22|625|248|209|400,True,True,True,artigo,,"Yes, unvalidated file name issue detected as CWE-22",True,True,True,artigo,,"Yes, isValidFilePath() method added to validate path."
+v8:53/13,v8,53,63,real,gpt-5,"CWE-476, CWE-703/CWE-248, CWE-1336, CWE-1333, CWE-200/CWE-209, CWE-22, CWE-400, 681/CWE-190",476|703|248|1336|1333|200|209|22|400|190,True,True,True,artigo,,"Yes, unvalidated file name issue detected as CWE-22",True,True,True,artigo,,"Yes, helper method added to validate path."
+v8:53/13,v8,53,63,real,opus-4.1,"CWE-20, CWE-252, CWE-390, CWE-770, CWE-73",20|252|390|770|73,True,True,True,artigo,,"Yes, unvalidated file name issue detected as CWE-20",True,True,True,artigo,,"Yes, helper method added to validate path."
+v8:54/2,v8,54,64,real,gpt-4.1,"CWE-476, CWE-190, CWE-209, CWE-252",476|190|209|252,True,True,True,artigo,,"Problem with strlen() detected as potential int overflow CWE-190, dereference error CWE-476.",True,True,True,artigo,,"Yes, size_t type for string size, check arguments for nullptr."
+v8:54/2,v8,54,64,real,gpt-5,"CWE-126, CWE-190/CWE-197, CWE-476, CWE-1333",126|190|197|476|1333,True,True,True,artigo,,"Problem with strlen() detected as potential int overflow CWE-190, dereference error CWE-476, and buffer overread CWE-126.",True,True,True,artigo,,"strlen() usage completle removed, caller should provide string size."
+v8:54/2,v8,54,64,real,opus-4.1,"CWE-476, CWE-120, CWE-20, CWE-209",476|120|20|209,True,True,True,artigo,,"Problem with strlen() detected as potential int overflow CWE-190, dereference error CWE-476.",True,True,True,artigo,,"Yes, size_t type for string size, check arguments for nullptr."
+v8:55/22,v8,55,65,known_fp,gpt-4.1,"CWE-259, CWE-250, CWE-20, CWE-120, CWE-252, CWE-772",259|250|20|120|252|772,,,,,,,,,,,,
+v8:55/22,v8,55,65,known_fp,gpt-5,"CWE-170, CWE-20, CWE-775, CWE-250",170|20|775|250,,,,,,,,,,,,
+v8:55/22,v8,55,65,known_fp,opus-4.1,"CWE-665, CWE-252, CWE-269, CWE-798",665|252|269|798,,,,,,,,,,,,
+v8:56/38,v8,56,66,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v8:56/38,v8,56,66,known_fp,gpt-5,,,,,,,,,,,,,,
+v8:56/38,v8,56,66,known_fp,opus-4.1,,,,,,,,,,,,,,
+v8:57/22,v8,57,67,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v8:57/22,v8,57,67,known_fp,gpt-5,,,,,,,,,,,,,,
+v8:57/22,v8,57,67,known_fp,opus-4.1,,,,,,,,,,,,,,
+v8:58/36,v8,58,68,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v8:58/36,v8,58,68,known_fp,gpt-5,,,,,,,,,,,,,,
+v8:58/36,v8,58,68,known_fp,opus-4.1,,,,,,,,,,,,,,
+v8:59/29,v8,59,69,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v8:59/29,v8,59,69,known_fp,gpt-5,,,,,,,,,,,,,,
+v8:59/29,v8,59,69,known_fp,opus-4.1,,,,,,,,,,,,,,
+v8:60/13,v8,60,70,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v8:60/13,v8,60,70,known_fp,gpt-5,,,,,,,,,,,,,,
+v8:60/13,v8,60,70,known_fp,opus-4.1,,,,,,,,,,,,,,
+v8:61/1,v8,61,71,real,gpt-4.1,"CWE-20, CWE-457, CWE-285, CWE-190, CWE-362",20|457|285|190|362,True,True,True,artigo,,"Yes, problem with class members initialisation detected.",True,True,True,artigo,,"Yes, fixed. Constructor added."
+v8:61/1,v8,61,71,real,gpt-5,"CWE-457, CWE-20, CWE-682, CWE-362",457|20|682|362,True,True,True,artigo,,"Yes, problem with class members initialisation detected.",True,True,True,artigo,,"Yes, fixed. Variable initialised."
+v8:61/1,v8,61,71,real,opus-4.1,"CWE-665, CWE-682, CWE-190, CWE-197, CWE-362",665|682|190|197|362,True,True,True,artigo,,"Yes, problem with class members initialisation detected.",True,True,True,artigo,,"Yes, fixed. Constructor added."
+v8:62/19,v8,62,72,real,gpt-4.1,"CWE-415, CWE-401, CWE-476, CWE-119, CWE-252, CWE-209",415|401|476|119|252|209,True,True,True,artigo,,"Yes, missing copy constructor detected.",True,True,True,artigo,,"Yes, copy constructor added."
+v8:62/19,v8,62,72,real,gpt-5,"CWE-415, CWE-416, CWE-401, CWE-703",415|416|401|703,True,True,True,artigo,,"Yes, missing copy constructor detected.",True,True,True,artigo,,"Yes, class was refactored to avoid using pointers internally to store data. Instead std::vector<T> used."
+v8:62/19,v8,62,72,real,opus-4.1,"CWE-398/CWE-673, CWE-190, CWE-755, CWE-476",398|673|190|755|476,True,True,True,artigo,,"Yes, missing copy constructor detected.",True,True,True,artigo,,"Yes, copy constructor added."
+v8:63/28,v8,63,73,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v8:63/28,v8,63,73,known_fp,gpt-5,,,,,,,,,,,,,,
+v8:63/28,v8,63,73,known_fp,opus-4.1,,,,,,,,,,,,,,
+v8:64/20,v8,64,74,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v8:64/20,v8,64,74,known_fp,gpt-5,,,,,,,,,,,,,,
+v8:64/20,v8,64,74,known_fp,opus-4.1,,,,,,,,,,,,,,
+v10:1/65,v10,1,1,real,gpt-4.1,,,False,False,False,artigo,,"No, this is not mentioned.",True,True,True,artigo,,"Yes, it is fixed, %u used for fprintf."
+v10:1/65,v10,1,1,real,gpt-5,,,True,True,True,artigo,,"Yes, spotted as minor issue. CWE not assigned.",True,True,True,artigo,,"Yes, it is fixed, %u used for fprintf."
+v10:1/65,v10,1,1,real,opus-4.1,,,False,False,False,artigo,,"No, this is not mentioned.",False,False,False,artigo,,"No, not fixed."
+v10:1/57,v10,1,2,real,gpt-4.1,,,True,True,True,artigo,,"Yes, detected as CWE-120",False,False,False,artigo,,Not it is still possible to have non NULL terminated buffer.
+v10:1/57,v10,1,2,real,gpt-5,,,False,False,False,artigo,,"No, it is not detected.",False,False,False,artigo,,Not it is still possible to have non NULL terminated buffer.
+v10:1/57,v10,1,2,real,opus-4.1,,,True,True,True,artigo,,"Yes, detected as CWE-120",True,True,True,artigo,,"Yes, it is addressed. They make sure that buffer is null terminated."
+v10:1/132,v10,1,3,real,gpt-4.1,,,True,True,True,artigo,,"Yes, issue with strtok identified. CWE-120, CWE-170.",True,True,True,artigo,,"Yes it is fixed, the use reeentrant version of strtok - strtok_r. Code is Uinux specific."
+v10:1/132,v10,1,3,real,gpt-5,,,True,True,True,artigo,,"Yes, issue with strtok identified. CWE-120, CWE-170.",True,True,True,artigo,,"Yes it is fixed, the use reeentrant version of strtok - strtok_r. Code is Uinux specific."
+v10:1/132,v10,1,3,real,opus-4.1,,,False,False,False,artigo,,"No, not detected.",False,False,False,artigo,,"No, strtok still in use."
+v10:2/7,v10,2,4,real,gpt-4.1,,,True,True,True,artigo,,"Yes, detected, but CWE was not assigned.",True,True,True,artigo,,"Yes, sprintf replaced with snprintf and correct format is used."
+v10:2/7,v10,2,4,real,gpt-5,,,True,True,True,artigo,,"Yes, detected, but CWE was not assigned.",True,True,True,artigo,,"Yes, sprintf replaced with snprintf and correct format is used."
+v10:2/7,v10,2,4,real,opus-4.1,,,True,True,True,artigo,,"Yes, sprintf arguments problem identified as issue which leads to buffer overflow CWE-120.",True,True,True,artigo,,"Yes, fixed. sptrinf() replaced with IO streams operations."
+v10:2/4,v10,2,5,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v10:2/4,v10,2,5,known_fp,gpt-5,,,,,,,,,,,,,,
+v10:2/4,v10,2,5,known_fp,opus-4.1,,,,,,,,,,,,,,
+v10:3/11,v10,3,6,real,gpt-4.1,,,True,True,True,artigo,,"Yes, lack of members validation detected.",True,True,True,artigo,,"Yes, it is fixed, all class member initialised."
+v10:3/11,v10,3,6,real,gpt-5,,,True,True,True,artigo,,"Yes, lack of members validation detected.",True,True,True,artigo,,"Yes, it is fixed, all class member initialized."
+v10:3/11,v10,3,6,real,opus-4.1,,,True,True,True,artigo,,"Yes, lack of members validation detected.",True,True,True,artigo,,"Yes, it is fixed, all class member initialized."
+v10:3/7,v10,3,7,real,gpt-4.1,,,True,True,True,artigo,,"Yes they recognised the issue. const char id[3] constructor parameter, but this is just syntactic sugar for const char* id",True,True,True,artigo,,"Yes, fixed by changing constructor parameter type to const char& and using safer version to get string length strnlen()."
+v10:3/7,v10,3,7,real,gpt-5,,,True,True,True,artigo,,"Yes they recognised the issue. const char id[3] constructor parameter, but this is just syntactic sugar for const char* id",True,True,True,artigo,,Yes fixed. Constructor now accepts only reference to array of specific size.
+v10:3/7,v10,3,7,real,opus-4.1,,,True,True,True,artigo,,"Yes they recognised the issue. const char id[3] constructor parameter, but this is just syntactic sugar for const char* id",True,True,True,artigo,,"Yes, fixed by changing constructor parameter type to const char& and using faser version to get string length strnlen()."
+v10:4/118,v10,4,8,known_fp,gpt-4.1,,,,,,,,,True,True,,planilha,,"Yes, variable name changed."
+v10:4/118,v10,4,8,known_fp,gpt-5,,,,,,,,,True,True,,planilha,,"Yes, variable name changed."
+v10:4/118,v10,4,8,known_fp,opus-4.1,,,,,,,,,True,True,,planilha,,"Yes, variable name changed."
+v10:4/78,v10,4,9,real,gpt-4.1,,,False,False,False,artigo,,"No, It was able to detect lack of open() return value check. But unsanitised argument was not detected.",False,False,False,artigo,,"No, unsanitised file name still used."
+v10:4/78,v10,4,9,real,gpt-5,,,False,False,False,artigo,,"No, it can’t detect issue with input file argument.",False,False,False,artigo,,"No, unsanitised file name still used."
+v10:4/78,v10,4,9,real,opus-4.1,,,False,False,False,artigo,,"No, it can’t detect issue with input file argument.",False,False,False,artigo,,"No, unsanitised file name still used."
+v10:5/108,v10,5,10,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v10:5/108,v10,5,10,known_fp,gpt-5,,,,,,,,,,,,,,
+v10:5/108,v10,5,10,known_fp,opus-4.1,,,,,,,,,,,,,,
+v10:5/25,v10,5,11,real,gpt-4.1,,,True,True,True,artigo,,"Yes, issue with file validation detected as CWE-20.",True,True,True,artigo,,"Yes, command line parameter file name is validated"
+v10:5/25,v10,5,11,real,gpt-5,,,True,True,True,artigo,,"Yes, issue with file validation detected as CWE-22.",True,True,True,artigo,,"Yes, command line parameter file name is validated"
+v10:5/25,v10,5,11,real,opus-4.1,,,True,True,True,artigo,,"Yes, issue with file validation detected as CWE-20.",True,True,True,artigo,,"Yes, command line parameter file name is validated"
+v10:6/118,v10,6,12,known_fp,gpt-4.1,,,,,,,,,True,True,,planilha,,"Yes, variable name changed."
+v10:6/118,v10,6,12,known_fp,gpt-5,,,,,,,,,True,True,,planilha,,"Yes, code refactored."
+v10:6/118,v10,6,12,known_fp,opus-4.1,,,,,,,,,True,True,,planilha,,"Yes, variable name changed."
+v10:6/78,v10,6,13,real,gpt-4.1,,,False,False,False,artigo,,"No, It was able to detect lack of open() return value check. But unsanitised argument was not detected.",False,False,False,artigo,,"No, unsanitised file name still used."
+v10:6/78,v10,6,13,real,gpt-5,,,False,False,False,artigo,,"No, it can’t detect issue with input file argument.",False,False,False,artigo,,"No, unsanitised file name still used."
+v10:6/78,v10,6,13,real,opus-4.1,,,False,False,False,artigo,,"No, it can’t detect issue with input file argument.",False,False,False,artigo,,"No, unsanitised file name still used."
+v10:7/7,v10,7,14,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v10:7/7,v10,7,14,known_fp,gpt-5,,,,,,,,,,,,,,
+v10:7/7,v10,7,14,known_fp,opus-4.1,,,,,,,,,,,,,,
+v10:7/81,v10,7,15,real,gpt-4.1,,,True,True,True,artigo,,"Yes, this is detected as CWE-120.",True,True,True,artigo,,"Yes, strcpy replaced with strncpy."
+v10:7/81,v10,7,15,real,gpt-5,,,True,True,True,artigo,,"Yes, this is detected as CWE-120.",True,True,True,artigo,,"Yes, safe method to copy data was introduced."
+v10:7/81,v10,7,15,real,opus-4.1,,,True,True,True,artigo,,"Yes, this is detected as CWE-120.",True,True,True,artigo,,"Yes, safe method to copy data was introduced."
+v10:8/7,v10,8,16,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v10:8/7,v10,8,16,known_fp,gpt-5,,,,,,,,,,,,,,
+v10:8/7,v10,8,16,known_fp,opus-4.1,,,,,,,,,,,,,,
+v10:8/82,v10,8,17,real,gpt-4.1,,,True,True,True,artigo,,"Yes, this is detected as CWE-120.",True,True,True,artigo,,"Yes, strcpy replaced with snprintf."
+v10:8/82,v10,8,17,real,gpt-5,,,True,True,True,artigo,,"Yes, this is detected as CWE-120.",True,True,True,artigo,,"Yes, safe method to copy data was introduced."
+v10:8/82,v10,8,17,real,opus-4.1,,,True,True,True,artigo,,"Yes, this is detected as CWE-120.",True,True,True,artigo,,"Yes, strcpy replaced with snprintf."
+v10:9/8,v10,9,18,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v10:9/8,v10,9,18,known_fp,gpt-5,,,,,,,,,,,,,,
+v10:9/8,v10,9,18,known_fp,opus-4.1,,,,,,,,,,,,,,
+v10:9/23,v10,9,19,real,gpt-4.1,,,True,True,True,artigo,,"Yes, spotted as CWE-20, CWE-190 (risk of overflow)",True,True,True,artigo,,"Yes, command line argument converted to int is checked and validated."
+v10:9/23,v10,9,19,real,gpt-5,,,True,True,True,artigo,,"Yes, spotted as CWE-20.",True,True,True,artigo,,"Yes, extra method to safely parse int argument added."
+v10:9/23,v10,9,19,real,opus-4.1,,,True,True,True,artigo,,"Yes, spotted as CWE-20.",True,True,True,artigo,,"Yes, command line argument converted to int is checked and validated."
+v10:10/20,v10,10,20,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v10:10/20,v10,10,20,known_fp,gpt-5,,,,,,,,,,,,,,
+v10:10/20,v10,10,20,known_fp,opus-4.1,,,,,,,,,,,,,,
+v10:10/37,v10,10,21,real,gpt-4.1,,,True,True,True,artigo,,"Yes, unsanitazed input it is identifies as CWE-120.",True,True,True,artigo,,"Yes, command line argument converted to int is checked and validated."
+v10:10/37,v10,10,21,real,gpt-5,,,True,True,True,artigo,,"Yes, unsanitased input it is identifies as CWE-120.",True,True,True,artigo,,"Yes, command line argument converted to int is checked and validated."
+v10:10/37,v10,10,21,real,opus-4.1,,,True,True,True,artigo,,"Yes, unsanitased input it is identifies as CWE-120.",True,True,True,artigo,,"Yes, strtol is used, extra checks added."
+v10:11/11,v10,11,22,real,gpt-4.1,"CWE-916, CWE-327, CWE-759, CWE-760",916|327|759|760,True,True,True,artigo,,"Yes, problem with SHA256 and with no salt is recognised",True,True,True,artigo,,"Yes, SHA256 replaced with Rfc2898DeriveBytes()"
+v10:11/11,v10,11,22,real,gpt-5,"CWE-759, CWE-916, CWE-208",759|916|208,True,True,True,artigo,,"Yes, problem with SHA256 and with no salt is recognised",True,True,True,artigo,,"Yes, SHA256 replaced with Rfc2898DeriveBytes()"
+v10:11/11,v10,11,22,real,opus-4.1,"CWE-256, CWE-759, CWE-916, CWE-327",256|759|916|327,True,True,True,artigo,,"Yes, problem with SHA256 and with no salt is recognised",True,True,True,artigo,,"Yes, SHA256 replaced with KeyDerivation.Pbkdf2()"
+v10:12/23,v10,12,23,real,gpt-4.1,"CWE-252, CWE-476, CWE-252, CWE-367, CWE-772",252|476|367|772,True,True,True,artigo,,Unchecked file operation identified as CWE-367.,True,True,True,artigo,,"Yes file write operation controlled, and return value checked"
+v10:12/23,v10,12,23,real,gpt-5,"CWE-252, CWE-703, CWE-476, CWE-732, CWE-59, CWE-772",252|703|476|732|59|772,True,True,True,artigo,,Unchecked file operation identified as CWE-732,True,True,True,artigo,,"Yes file write operation controlled, and return value checked"
+v10:12/23,v10,12,23,real,opus-4.1,"CWE-252, CWE-476, CWE-703, CWE-404, CWE-73",252|476|703|404|73,True,True,True,artigo,,"Unchecked file operations were identified, but CWE-363 was not assigned.",True,True,True,artigo,,"Yes file write operation and fclose() controlled, and return value checked"
+v10:12/25,v10,12,24,real,gpt-4.1,,,True,True,True,artigo,,CWE-252 unchecked return values detected.,True,True,True,artigo,,Yes fopen() return value now checked.
+v10:12/25,v10,12,24,real,gpt-5,,,True,True,True,artigo,,CWE-252 unchecked return values detected.,True,True,True,artigo,,Yes fopen() return value now checked.
+v10:12/25,v10,12,24,real,opus-4.1,,,True,True,True,artigo,,CWE-252 unchecked return values detected.,True,True,True,artigo,,Yes fopen() return value now checked.
+v10:13/59,v10,13,25,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v10:13/59,v10,13,25,known_fp,gpt-5,,,,,,,,,,,,,,
+v10:13/59,v10,13,25,known_fp,opus-4.1,,,,,,,,,,,,,,
+v10:13/13,v10,13,26,real,gpt-4.1,,,True,True,True,artigo,,"Yes, unsanitised input it is identifies as CWE-20.",True,True,True,artigo,,"Yes, special method added to validate command line argument."
+v10:13/13,v10,13,26,real,gpt-5,,,True,True,True,artigo,,"Yes, unsanitised input it is identifies as CWE-20.",True,True,True,artigo,,"Yes, special method added to validate command line argument."
+v10:13/13,v10,13,26,real,opus-4.1,,,True,True,True,artigo,,"Yes, unsanitised input it is identifies as CWE-20.",True,True,True,artigo,,"Yes, extra method added to validate command line parameter."
+v10:14/2,v10,14,27,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v10:14/2,v10,14,27,known_fp,gpt-5,,,,,,,,,,,,,,
+v10:14/2,v10,14,27,known_fp,opus-4.1,,,,,,,,,,,,,,
+v10:15/9,v10,15,28,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v10:15/9,v10,15,28,known_fp,gpt-5,,,,,,,,,,,,,,
+v10:15/9,v10,15,28,known_fp,opus-4.1,,,,,,,,,,,,,,
+v10:15/17,v10,15,29,real,gpt-4.1,,,True,True,True,artigo,,"Yes, unchecked return valud ftell() issue detected.",True,True,True,artigo,,"Yes, ftell() usage verified."
+v10:15/17,v10,15,29,real,gpt-5,,,True,True,True,artigo,,"Yes, unchecked return valud ftell() issue detected.",True,True,True,artigo,,"Yes, code was refactored and not using ftell() anymore. Extra check added."
+v10:15/17,v10,15,29,real,opus-4.1,,,True,True,True,artigo,,"Yes, unchecked return valud ftell() issue detected.",True,True,True,artigo,,"Yes, ftell() return value is checked correctly. Much less changes than chatgpt5 in code."
+v10:16/3,v10,16,30,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v10:16/3,v10,16,30,known_fp,gpt-5,,,,,,,,,,,,,,
+v10:16/3,v10,16,30,known_fp,opus-4.1,,,,,,,,,,,,,,
+v10:17/32,v10,17,31,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v10:17/32,v10,17,31,known_fp,gpt-5,,,,,,,,,,,,,,
+v10:17/32,v10,17,31,known_fp,opus-4.1,,,,,,,,,,,,,,
+v10:18/1,v10,18,32,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v10:18/1,v10,18,32,known_fp,gpt-5,,,,,,,,,,,,,,
+v10:18/1,v10,18,32,known_fp,opus-4.1,,,,,,,,,,,,,,
+v10:19/45,v10,19,33,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v10:19/45,v10,19,33,known_fp,gpt-5,,,,,,,,,,,,,,
+v10:19/45,v10,19,33,known_fp,opus-4.1,,,,,,,,,,,,,,
+v10:19/18,v10,19,34,real,gpt-4.1,,,True,True,True,artigo,,"Yes, CWE-20 input validation issue detected.",True,True,True,artigo,,"Yes, extra check when opening file added."
+v10:19/18,v10,19,34,real,gpt-5,,,True,True,True,artigo,,"Yes, filename argument and opening file in general. Identified as CWE-252/CWE-703.",True,True,True,artigo,,"Yes, extra check when opening file added."
+v10:19/18,v10,19,34,real,opus-4.1,,,True,True,True,artigo,,"Yes, CWE-20: Improper Input Validation detected.",True,True,True,artigo,,"Yes, extra method added to validate file name."
+v10:20/4,v10,20,35,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v10:20/4,v10,20,35,known_fp,gpt-5,,,,,,,,,,,,,,
+v10:20/4,v10,20,35,known_fp,opus-4.1,,,,,,,,,,,,,,
+v10:21/50,v10,21,36,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v10:21/50,v10,21,36,known_fp,gpt-5,,,,,,,,,,,,,,
+v10:21/50,v10,21,36,known_fp,opus-4.1,,,,,,,,,,,,,,
+v10:21/15,v10,21,37,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v10:21/15,v10,21,37,known_fp,gpt-5,,,,,,,,,,,,,,
+v10:21/15,v10,21,37,known_fp,opus-4.1,,,,,,,,,,,,,,
+v10:22/14,v10,22,38,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v10:22/14,v10,22,38,known_fp,gpt-5,,,,,,,,,,,,,,
+v10:22/14,v10,22,38,known_fp,opus-4.1,,,,,,,,,,,,,,
+v10:23/27,v10,23,39,real,gpt-4.1,,,True,True,True,artigo,,"Yes, problem with overflow detected.",True,True,True,artigo,,"Yes, source code line updated to make correct type cast to long long integer."
+v10:23/27,v10,23,39,real,gpt-5,,,True,True,True,artigo,,"Yes, problem with overflow detected.",True,True,True,artigo,,"Yes, extra methods added to verify to multiply without overflow."
+v10:23/27,v10,23,39,real,opus-4.1,,,True,True,True,artigo,,"Yes, problem with overflow detected.",True,True,True,artigo,,"Yes, extra methods added to verify to multiply without overflow."
+v10:24/59,v10,24,40,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v10:24/59,v10,24,40,known_fp,gpt-5,,,,,,,,,,,,,,
+v10:24/59,v10,24,40,known_fp,opus-4.1,,,,,,,,,,,,,,
+v10:25/78,v10,25,41,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v10:25/78,v10,25,41,known_fp,gpt-5,,,,,,,,,,,,,,
+v10:25/78,v10,25,41,known_fp,opus-4.1,,,,,,,,,,,,,,
+v10:26/45,v10,26,42,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v10:26/45,v10,26,42,known_fp,gpt-5,,,,,,,,,,,,,,
+v10:26/45,v10,26,42,known_fp,opus-4.1,,,,,,,,,,,,,,
+v10:26/6,v10,26,43,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v10:26/6,v10,26,43,known_fp,gpt-5,,,,,,,,,,,,,,
+v10:26/6,v10,26,43,known_fp,opus-4.1,,,,,,,,,,,,,,
+v10:27/83,v10,27,44,real,gpt-4.1,,,False,False,False,artigo,,"No, It can’t see the problem.",False,False,False,artigo,,Not fixed.
+v10:27/83,v10,27,44,real,gpt-5,,,False,False,False,artigo,,"No, It can’t see the problem.",False,False,False,artigo,,Not fixed.
+v10:27/83,v10,27,44,real,opus-4.1,,,True,True,True,artigo,,"Yes, dead branch in if operator spotted.",False,False,False,artigo,,"No, not fully fixed. There is still issue with ability2. Not covered case when ability2 is ready to use."
+v10:28/7,v10,28,45,real,gpt-4.1,,,False,False,False,artigo,,"No, It can’t detect the problem.",False,False,False,artigo,,"No, code is unmodified. Extra ‘ | 0’ still here."
+v10:28/7,v10,28,45,real,gpt-5,,,False,False,False,artigo,,"No, It can’t detect the problem.",False,False,False,artigo,,Not fixed.
+v10:28/7,v10,28,45,real,opus-4.1,,,False,False,False,artigo,,"No, It can’t detect the problem.",False,False,False,artigo,,Not fixed.
+v10:29/53,v10,29,46,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v10:29/53,v10,29,46,known_fp,gpt-5,,,,,,,,,,,,,,
+v10:29/53,v10,29,46,known_fp,opus-4.1,,,,,,,,,,,,,,
+v10:30/23,v10,30,47,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v10:30/23,v10,30,47,known_fp,gpt-5,,,,,,,,,,,,,,
+v10:30/23,v10,30,47,known_fp,opus-4.1,,,,,,,,,,,,,,
+v10:31/53,v10,31,48,real,gpt-4.1,,,True,True,True,artigo,,"Yes, it see problem as CWE-338",True,True,True,artigo,,"Yes, old random generator replaced with new from <random>"
+v10:31/53,v10,31,48,real,gpt-5,,,True,True,True,artigo,,"Yes, it see problem as CWE-338",True,True,True,artigo,,"Yes, old random generator replaced with new from <random>"
+v10:31/53,v10,31,48,real,opus-4.1,,,True,True,True,artigo,,"Yes, it see problem as CWE-338",True,True,True,artigo,,"Yes, old random generator replaced with new from <random>"
+v10:32/54,v10,32,49,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v10:32/54,v10,32,49,known_fp,gpt-5,,,,,,,,,,,,,,
+v10:32/54,v10,32,49,known_fp,opus-4.1,,,,,,,,,,,,,,
+v10:33/6,v10,33,50,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v10:33/6,v10,33,50,known_fp,gpt-5,,,,,,,,,,,,,,
+v10:33/6,v10,33,50,known_fp,opus-4.1,,,,,,,,,,,,,,
+v10:34/11,v10,34,51,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v10:34/11,v10,34,51,known_fp,gpt-5,,,,,,,,,,,,,,
+v10:34/11,v10,34,51,known_fp,opus-4.1,,,,,,,,,,,,,,
+v10:35/4,v10,35,52,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v10:35/4,v10,35,52,known_fp,gpt-5,,,,,,,,,,,,,,
+v10:35/4,v10,35,52,known_fp,opus-4.1,,,,,,,,,,,,,,
+v10:36/25,v10,36,53,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v10:36/25,v10,36,53,known_fp,gpt-5,,,,,,,,,,,,,,
+v10:36/25,v10,36,53,known_fp,opus-4.1,,,,,,,,,,,,,,
+v10:37/25,v10,37,54,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v10:37/25,v10,37,54,known_fp,gpt-5,,,,,,,,,,,,,,
+v10:37/25,v10,37,54,known_fp,opus-4.1,,,,,,,,,,,,,,
+v10:38/19,v10,38,55,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v10:38/19,v10,38,55,known_fp,gpt-5,,,,,,,,,,,,,,
+v10:38/19,v10,38,55,known_fp,opus-4.1,,,,,,,,,,,,,,
+v10:39/61,v10,39,56,real,gpt-4.1,,,True,True,True,artigo,,"Yes, problem identified.",False,False,False,artigo,,"No, problem still code. Code is unmodified. But it said that problem fixed."
+v10:39/61,v10,39,56,real,gpt-5,,,True,True,True,artigo,,"Yes, problem identified.",False,True,False,artigo,difere,"Yes, problem fixed. String size calculated before copy."
+v10:39/61,v10,39,56,real,opus-4.1,,,True,True,True,artigo,,"Yes, problem identified.",False,False,False,artigo,,"No, It attempts to fix but did it incorrectly, more bytes still be copied into destinations. But at least input name parameter is validated."
+v10:40/8,v10,40,57,real,gpt-4.1,,,True,True,True,artigo,,"Yes, path traversal risk identified.",True,True,True,artigo,,"Yes, extra code to check that path is safe added."
+v10:40/8,v10,40,57,real,gpt-5,,,True,True,True,artigo,,"Yes, path traversal risk identified.",True,True,True,artigo,,"Yes, extra code to check that path is safe added."
+v10:40/8,v10,40,57,real,opus-4.1,,,True,True,True,artigo,,"Yes, path traversal risk identified.",True,True,True,artigo,,"Yes, extra code to check that path is safe added."
+v10:41/7,v10,41,58,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v10:41/7,v10,41,58,known_fp,gpt-5,,,,,,,,,,,,,,
+v10:41/7,v10,41,58,known_fp,opus-4.1,,,,,,,,,,,,,,
+v10:42/15,v10,42,59,real,gpt-4.1,,,True,True,True,artigo,,"Yes, path traversal risk identified.",True,True,True,artigo,,"Yes, extra code to check that path is safe added."
+v10:42/15,v10,42,59,real,gpt-5,,,True,True,True,artigo,,"Yes, path traversal risk identified.",True,True,True,artigo,,"Yes, extra code to check that path is safe added."
+v10:42/15,v10,42,59,real,opus-4.1,,,True,True,True,artigo,,"Yes, path traversal risk identified.",True,True,True,artigo,,"Yes, extra code to check that path is safe added."
+v10:43/4,v10,43,60,real,gpt-4.1,,,True,True,True,artigo,,"Yes, path traversal risk identified.",False,False,False,artigo,,"No, nothing was done to validate file path."
+v10:43/4,v10,43,60,real,gpt-5,,,True,True,True,artigo,,"Yes, path traversal risk identified.",True,True,True,artigo,,"Yes, filename validated using regex"
+v10:43/4,v10,43,60,real,opus-4.1,,,True,True,True,artigo,,"Yes, path traversal risk identified.",False,True,False,artigo,difere,"Yes, function added to sanitize filepath."
+v10:44/87,v10,44,61,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v10:44/87,v10,44,61,known_fp,gpt-5,,,,,,,,,,,,,,
+v10:44/87,v10,44,61,known_fp,opus-4.1,,,,,,,,,,,,,,
+v10:45/4,v10,45,62,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v10:45/4,v10,45,62,known_fp,gpt-5,,,,,,,,,,,,,,
+v10:45/4,v10,45,62,known_fp,opus-4.1,,,,,,,,,,,,,,
+v10:46/8,v10,46,63,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v10:46/8,v10,46,63,known_fp,gpt-5,,,,,,,,,,,,,,
+v10:46/8,v10,46,63,known_fp,opus-4.1,,,,,,,,,,,,,,
+v10:47/36,v10,47,64,real,gpt-4.1,,,True,True,True,artigo,,"Yes, it see the problem",True,True,True,artigo,,"Yes, srand replaced with <random>"
+v10:47/36,v10,47,64,real,gpt-5,,,True,True,True,artigo,,"Yes, it see the problem",True,True,True,artigo,,"Yes, unsecure random generator initialisation was removed as not needed in application."
+v10:47/36,v10,47,64,real,opus-4.1,,,True,True,True,artigo,,"Yes, it see the problem",True,True,True,artigo,,"Yes, srand replaced with <random>"
+v10:48/7,v10,48,65,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v10:48/7,v10,48,65,known_fp,gpt-5,,,,,,,,,,,,,,
+v10:48/7,v10,48,65,known_fp,opus-4.1,,,,,,,,,,,,,,
+v10:49/9,v10,49,66,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v10:49/9,v10,49,66,known_fp,gpt-5,,,,,,,,,,,,,,
+v10:49/9,v10,49,66,known_fp,opus-4.1,,,,,,,,,,,,,,
+v10:50/89,v10,50,67,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v10:50/89,v10,50,67,known_fp,gpt-5,,,,,,,,,,,,,,
+v10:50/89,v10,50,67,known_fp,opus-4.1,,,,,,,,,,,,,,
+v10:51/52,v10,51,68,known_fp,gpt-4.1,,,,,,,,,,,,,,
+v10:51/52,v10,51,68,known_fp,gpt-5,,,,,,,,,,,,,,
+v10:51/52,v10,51,68,known_fp,opus-4.1,,,,,,,,,,,,,,

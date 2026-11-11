@@ -1,0 +1,52 @@
+# Configuracao do experimento (PLANO_EXECUCAO.md, F3). Caminhos relativos a raiz do projeto
+# (ou a --root); cache e runs podem ser redirecionados com --work-dir (no Kaggle: /kaggle/working).
+paths:
+  raw_root: pipeline/data/raw/MSc_DataEngineering_Results
+  data_dir: pipeline/data
+  prompts_dir: pipeline/prompts
+  cwe_xml: pipeline/data/cwe/1000.xml
+  families: pipeline/matching_families.yaml
+  cache_dir: pipeline/cache
+  runs_dir: pipeline/runs
+
+# Modelos medidos na F0 (Kaggle, 2x Tesla T4, Ollama 0.40.15, contexto 16384). O digest e a prova de que a tag nao mudou.
+models:
+  detector:                       # detector (A1), corretor (A2), B0 e extracao do B0
+    tag: qwen2.5-coder:14b
+    base_url: http://127.0.0.1:11434/v1
+    digest: 9ec8897f747e246e970bc5cfdda85d22f1123dc2e3d34978a010a75968716849
+    quantization: Q4_K_M
+    ollama_version: "0.40.15"
+    reasoning_effort: null
+    parallel: 1                   # F0: com cache KV f16 so coube na T4 com NUM_PARALLEL=1 (19,7 tok/s); ver DIARIO
+    infer: {context_length: 16384, kv_cache_type: f16, flash_attention: 1}
+    temperature_variance: 0.7     # cartao do modelo (Qwen2.5-Coder); usado so no estudo de variancia
+  verifier:                       # verificador adversarial (outra familia: gpt-oss, da OpenAI)
+    tag: gpt-oss:20b
+    base_url: http://127.0.0.1:11435/v1
+    digest: f38aa0c53da5f8c49d08c43a99df24ff53167fe68e24664a7777288e7656fdfe
+    quantization: MXFP4
+    ollama_version: "0.40.15"
+    reasoning_effort: medium      # fixo em todas as configuracoes
+    parallel: 4                   # F0: coube a 4 em paralelo (12,8 GB); 36 tok/s por requisicao, 50 tok/s agregados
+    infer: {context_length: 16384, kv_cache_type: f16, flash_attention: 1}
+    temperature_variance: 1.0     # cartao do modelo (gpt-oss)
+
+prompts: {b0: b0_paper, b0_extract: b0_extract_v1, a1: a1_v2, a3: a3_v1, a2: a2_v1, a3b: a3b_v1}   # a1_v1 = piloto 1 (ver DIARIO)
+
+# Execucao principal: temperature=0 e seed=0 em todas as chamadas. Estudo de variancia: B1 e C3, seeds 1-3,
+# temperatura do cartao de cada modelo.
+repetitions:
+  main:  {seed: 0, temperature: 0.0, configs: [B0, B1, C1, C2, C3]}
+  var1:  {seed: 1, temperature: model_card, configs: [B1, C3]}
+  var2:  {seed: 2, temperature: model_card, configs: [B1, C3]}
+  var3:  {seed: 3, temperature: model_card, configs: [B1, C3]}
+
+# Arquivos em paralelo: um por "fatia" de cada servidor, mais folga (cada arquivo alterna entre os dois servidores).
+workers: {files_in_parallel: 6}
+
+# Guarda de cota do Kaggle (~30 h/semana, sessoes de ate 12 h): para de iniciar arquivos novos ao passar do limite.
+gpu: {weekly_quota_hours: 30, session_limit_hours: 11.0}
+
+# Limite de falhas aceito na execucao completa (F5): < 2%.
+max_failure_rate: 0.02

@@ -1,0 +1,1 @@
+{"status": "error", "rc": 1, "n_errors": 4, "errors": ["snippet.cpp:1:4: error: ‘cout’ does not name a type", "snippet.cpp:2:4: error: ‘cin’ does not name a type", "snippet.cpp:3:4: error: ‘ifstream’ does not name a type", "snippet.cpp:4:4: error: ‘infile’ does not name a type; did you mean ‘inline’?"], "cmd": "g++ -std=c++17 -fsyntax-only -x c++ snippet.cpp"}

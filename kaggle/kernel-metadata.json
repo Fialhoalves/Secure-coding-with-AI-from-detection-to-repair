@@ -1,0 +1,16 @@
+{
+  "id": "SEU_USUARIO_KAGGLE/taes-f0-infer",
+  "title": "taes-f0-infer",
+  "code_file": "infer.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "dataset_sources": [],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "model_sources": []
+}
+

@@ -1,0 +1,32 @@
+# Ambiente local
+pipeline/.venv/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+node_modules/
+
+# Certificados da máquina (proxy HTTPS do antivírus); cada um gera os seus
+pipeline/.certs/
+
+# Dados de terceiros baixados à parte (ver README, seção "Dados")
+pipeline/data/raw/
+pipeline/data/cwe/*.zip
+
+# Gerado por kaggle/build_dataset.py
+kaggle/dataset_build/
+
+# Materiais da disciplina que não são deste trabalho
+Apresenta*Padr*CIn-UFPE.pdf
+Guia de LLMs gratuitas*.pdf
+
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*
+
+# Saídas baixadas do Kaggle e arquivos gerados localmente
+saidas/
+apresentacao/fonte/*.html
+relatorio/*.html

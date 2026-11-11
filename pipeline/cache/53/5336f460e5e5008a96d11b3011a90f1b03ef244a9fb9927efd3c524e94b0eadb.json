@@ -1,0 +1,1 @@
+{"status": "error", "rc": 1, "n_errors": 2, "errors": ["snippet.c:1:29: error: ‘O_RDWR’ undeclared here (not in a function)", "snippet.c:2:1: error: expected identifier or ‘(’ before ‘if’"], "cmd": "gcc -std=c11 -fsyntax-only -x c snippet.c"}

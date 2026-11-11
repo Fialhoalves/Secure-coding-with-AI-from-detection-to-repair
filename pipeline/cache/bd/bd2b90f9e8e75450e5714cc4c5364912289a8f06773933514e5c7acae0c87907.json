@@ -1,0 +1,1 @@
+{"status": "ok", "available": {"flawfinder": true, "cppcheck": true, "semgrep": true}, "findings": [{"scanner": "cppcheck", "line": 13, "severity": "error", "rule": "missingReturn", "cwe": [758], "message": "Found an exit path from function with non-void return type that has missing return statement"}], "errors": {}}

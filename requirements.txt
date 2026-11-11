@@ -1,0 +1,22 @@
+# Ambiente local: dados e gabarito (F1), reanálise e auditoria do artigo (F2), análise (F4, F6-F8),
+# testes e relatório. Testado com Python 3.12 no Windows. A inferência roda no Kaggle, que instala o que precisa.
+pandas==3.1.1
+numpy==2.5.4
+scipy==1.18.1
+statsmodels==0.15.0
+matplotlib==3.11.2
+pydantic==2.14.3
+PyYAML==6.0.3
+odfpy==1.4.1
+pypdf==7.0.0
+tabulate==0.10.0
+openai==3.48.0
+markdown-it-py==4.2.0
+pillow==13.0.0
+pytest==9.2.0
+
+# Para enviar kernels e baixar as saídas do Kaggle
+kaggle==2.2.5
+
+# Só para o guia da apresentação (miniaturas dos slides)
+pypdfium2==5.15.2

@@ -1,0 +1,1 @@
+{"status": "ok", "available": {"flawfinder": true, "cppcheck": true, "semgrep": true}, "findings": [{"scanner": "cppcheck", "line": 67, "severity": "error", "rule": "invalidContainerReference", "cwe": [664], "message": "Reference to stack that may be invalid."}], "errors": {}}

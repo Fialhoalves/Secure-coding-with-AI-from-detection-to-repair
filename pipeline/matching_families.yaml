@@ -1,0 +1,11 @@
+# Familias minimas de CWE consideradas compativeis entre si (PLANO_EXECUCAO.md, F6 item 1).
+# Alem destas, dois CWEs sao compativeis se forem iguais ou tiverem relacao ancestral/descendente na
+# CWE Research View 1000 (sem contar os 10 "Pillars", genericos demais; ver cwe.py).
+families:
+  buffer: [119, 120, 121, 122, 125, 126, 131, 787, 805]
+  input_validation: [20, 129, 1284]
+  command: [77, 78, 88]
+  path: [22, 23, 36, 73, 61]
+  concurrency: [362, 363, 367, 663]
+  crypto_random: [327, 328, 330, 338]
+  resources: [401, 404, 772, 775]

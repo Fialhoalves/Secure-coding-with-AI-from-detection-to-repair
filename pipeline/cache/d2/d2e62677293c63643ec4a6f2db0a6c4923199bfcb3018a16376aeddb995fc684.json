@@ -1,0 +1,1 @@
+{"status": "error", "rc": 1, "n_errors": 2, "errors": ["snippet.c:14:1: error: unknown type name ‘define’", "snippet.c:14:20: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before numeric constant"], "cmd": "gcc -std=c11 -fsyntax-only -x c snippet.c"}

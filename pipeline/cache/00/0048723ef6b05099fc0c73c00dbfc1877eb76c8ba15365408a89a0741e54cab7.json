@@ -1,0 +1,1 @@
+{"status": "ok", "available": {"flawfinder": true, "cppcheck": true, "semgrep": true}, "findings": [{"scanner": "flawfinder", "line": 61, "severity": "note", "rule": "FF1008", "cwe": [120], "message": "Easily used incorrectly; doesn't always \\0-terminate or check for invalid pointers [MS-banned] (CWE-120)."}], "errors": {}}

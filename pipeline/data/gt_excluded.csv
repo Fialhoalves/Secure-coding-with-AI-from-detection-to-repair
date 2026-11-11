@@ -1,0 +1,2 @@
+issue_id,snapshot,file_number,line,line_sheet,line_note,issue_number,severity,cwe_type,cwe_ids,cwe_sheet,cwe_paper,cwe_source,scanners,scanner_types,origin,origin_sheet,origin_paper,llm_name,language_sheet,source_code,verdict_raw,comment,code_path,detections_json
+v8:2/14,v8,2,14,14,,3,note,CWE-352,352,352,,planilha:CWE type,snyk,,gpt,gpt,,GPT-3.5,C#,,Yes. Antiforgery attribute recommend to use.,,DetectAndFix_Data/2025_09_24/DevGPT_v8_snapshot_20231012/File_02/LLMs/gpt-4.1-2025-04-14/Code_001.cs,[]

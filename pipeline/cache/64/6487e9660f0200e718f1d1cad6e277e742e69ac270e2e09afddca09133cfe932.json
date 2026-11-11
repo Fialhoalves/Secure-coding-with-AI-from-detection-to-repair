@@ -1,0 +1,1 @@
+{"status": "error", "rc": 1, "n_errors": 1, "errors": ["snippet.c:77:18: error: ‘flag’ undeclared (first use in this function)"], "cmd": "gcc -std=c11 -fsyntax-only -x c snippet.c"}

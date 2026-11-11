@@ -1,0 +1,1 @@
+{"status": "error", "rc": 1, "n_errors": 4, "errors": ["snippet.cpp:3:7: error: stray ‘#’ in program", "snippet.cpp:5:7: error: stray ‘#’ in program", "snippet.cpp:1:1: error: expected unqualified-id before ‘<’ token", "snippet.cpp:116:1: error: expected unqualified-id before ‘<’ token"], "cmd": "g++ -std=c++17 -fsyntax-only -x c++ snippet.cpp"}

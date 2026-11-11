@@ -1,0 +1,8 @@
+{
+  "name": "taes-apresentacao",
+  "private": true,
+  "description": "Gera os slides da apresentação (build_slides.js)",
+  "dependencies": {
+    "pptxgenjs": "3.12.0"
+  }
+}

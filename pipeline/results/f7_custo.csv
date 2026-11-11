@@ -1,0 +1,6 @@
+config,chamadas/arq,tokens entrada/arq,tokens saida/arq,s de chamada/arq,tokens totais por issue real acusado
+B0,2.0,3294,2447,158.2,43632
+B1,1.0,1193,353,23.1,16020
+C1,3.0,4090,1373,53.7,155689
+C2,5.0,8133,3944,197.4,344205
+C3,3.4,4883,1728,71.8,188415

@@ -1,0 +1,7 @@
+issue_id,model,field,planilha,artigo,conflito,texto_planilha
+v8:8/36,gpt-4.1,detected,True,False,difere,"Yes, unvalidated input identified, CWE-20 for port, but not for wordlist_path"
+v8:8/36,gpt-5,detected,True,False,difere,"Yes, unvalidated input identified, CWE-20 for port, but not for wordlist_path"
+v8:48/23,gpt-5,fixed,,True,planilha_sem_rotulo_claro,There is attempt to fix it. Special method added to select port name from serial ports which are physically available. But port name not passed as parameter to ctor.
+v8:52/14,opus-4.1,fixed,,True,planilha_sem_rotulo_claro,Buffers still fix sized but there was attempt to fix. Now two separate buffers for receive and transmit.
+v10:39/61,gpt-5,fixed,True,False,difere,"Yes, problem fixed. String size calculated before copy."
+v10:43/4,opus-4.1,fixed,True,False,difere,"Yes, function added to sanitize filepath."

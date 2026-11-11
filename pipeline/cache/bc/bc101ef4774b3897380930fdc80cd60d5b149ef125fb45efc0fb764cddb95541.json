@@ -1,0 +1,1 @@
+{"status": "error", "rc": 1, "n_errors": 2, "errors": ["snippet.cpp:1:5: error: ‘size_t’ does not name a type", "snippet.cpp:2:33: error: ‘arraySize’ was not declared in this scope"], "cmd": "g++ -std=c++17 -fsyntax-only -x c++ snippet.cpp"}

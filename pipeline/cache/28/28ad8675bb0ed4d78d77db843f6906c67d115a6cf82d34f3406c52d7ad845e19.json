@@ -1,0 +1,1 @@
+{"status": "error", "rc": 1, "n_errors": 1, "errors": ["snippet.c:1:18: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘buildCallback’"], "cmd": "gcc -std=c11 -fsyntax-only -x c snippet.c"}

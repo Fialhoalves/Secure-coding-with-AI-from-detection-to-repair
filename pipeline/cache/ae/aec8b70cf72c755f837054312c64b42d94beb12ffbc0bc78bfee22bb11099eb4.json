@@ -1,0 +1,1 @@
+{"status": "ok", "available": {"flawfinder": true, "cppcheck": true, "semgrep": true}, "findings": [{"scanner": "cppcheck", "line": 1, "severity": "error", "rule": "internalError", "cwe": [0], "message": "Internal error. AST cyclic dependency."}], "errors": {}}

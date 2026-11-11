@@ -1,0 +1,1 @@
+{"status": "error", "rc": 1, "n_errors": 4, "errors": ["snippet.c:2:26: error: ‘socket_fd’ undeclared here (not in a function)", "snippet.c:4:1: error: expected identifier or ‘(’ before ‘if’", "snippet.c:6:3: error: expected identifier or ‘(’ before ‘else’", "snippet.c:8:3: error: expected identifier or ‘(’ before ‘else’"], "cmd": "gcc -std=c11 -fsyntax-only -x c snippet.c"}

@@ -1,0 +1,1 @@
+{"status": "error", "rc": 1, "n_errors": 2, "errors": ["snippet.c:22:29: error: ‘IFNAMSIZ’ undeclared (first use in this function)", "snippet.c:42:40: error: ‘SO_BINDTODEVICE’ undeclared (first use in this function)"], "cmd": "gcc -std=c11 -fsyntax-only -x c snippet.c"}

@@ -1,0 +1,1 @@
+{"status": "ok", "available": {"flawfinder": true, "cppcheck": true, "semgrep": true}, "findings": [{"scanner": "cppcheck", "line": 26, "severity": "note", "rule": "cstyleCast", "cwe": [398], "message": "C-style pointer casting"}, {"scanner": "cppcheck", "line": 33, "severity": "note", "rule": "cstyleCast", "cwe": [398], "message": "C-style pointer casting"}], "errors": {}}

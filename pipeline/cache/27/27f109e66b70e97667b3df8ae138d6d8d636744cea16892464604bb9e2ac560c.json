@@ -1,0 +1,1 @@
+{"status": "error", "rc": 1, "n_errors": 1, "errors": ["snippet.cpp:7:10: fatal error: vertex.hpp: No such file or directory"], "cmd": "g++ -std=c++17 -fsyntax-only -x c++ snippet.cpp"}

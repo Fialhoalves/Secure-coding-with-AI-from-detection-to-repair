@@ -1,0 +1,4 @@
+modelo,arquivos,CWEs/arquivo (todos),"CWEs/arquivo (positivos, n=48)","CWEs/arquivo (negativos, n=66)",% negativos com >=1 CWE,% positivos com >=1 CWE,razao de alarmes (CWEs citadas / 56 issues),falsos alarmes conhecidos citados / 85 [estrita],... so em arquivos negativos [estrita],issues reais citadas / 56 [estrita],falsos alarmes conhecidos citados / 85 [leniente],... so em arquivos negativos [leniente],issues reais citadas / 56 [leniente],issues reais detectadas segundo os autores / 56
+gpt-4.1,114,4.85,5.17,4.62,100.0,100.0,9.88,36/85 (42.4%),29/69 (42.0%),27/56 (48.2%),61/85 (71.8%),53/69 (76.8%),49/56 (87.5%),46
+gpt-5,114,6.46,6.62,6.35,100.0,100.0,13.16,33/85 (38.8%),28/69 (40.6%),28/56 (50.0%),57/85 (67.1%),50/69 (72.5%),50/56 (89.3%),44
+opus-4.1,114,4.82,5.1,4.61,98.5,100.0,9.8,30/85 (35.3%),25/69 (36.2%),23/56 (41.1%),57/85 (67.1%),49/69 (71.0%),48/56 (85.7%),45

@@ -1,0 +1,1 @@
+{"status": "error", "rc": 1, "n_errors": 2, "errors": ["snippet.c:71:73: error: ‘S_IRUSR’ undeclared (first use in this function)", "snippet.c:71:83: error: ‘S_IWUSR’ undeclared (first use in this function)"], "cmd": "gcc -std=c11 -fsyntax-only -x c snippet.c"}

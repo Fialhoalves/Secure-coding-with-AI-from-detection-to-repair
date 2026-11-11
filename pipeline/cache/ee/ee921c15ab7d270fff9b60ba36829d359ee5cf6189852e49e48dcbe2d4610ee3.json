@@ -1,0 +1,1 @@
+{"status": "ok", "rc": 0, "n_errors": 0, "errors": [], "cmd": "g++ -std=c++17 -fsyntax-only -x c++ snippet.cpp"}

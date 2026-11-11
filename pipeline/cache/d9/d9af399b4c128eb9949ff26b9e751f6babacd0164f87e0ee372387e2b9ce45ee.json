@@ -1,0 +1,1 @@
+{"status": "error", "rc": 1, "n_errors": 3, "errors": ["snippet.c:13:22: error: storage size of ‘sa’ isn’t known", "snippet.c:17:19: error: ‘SA_RESETHAND’ undeclared (first use in this function)", "snippet.c:25:5: error: unknown type name ‘pid_t’"], "cmd": "gcc -std=c11 -fsyntax-only -x c snippet.c"}

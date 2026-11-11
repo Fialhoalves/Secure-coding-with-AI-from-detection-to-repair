@@ -1,0 +1,1 @@
+{"status": "error", "rc": 1, "n_errors": 2, "errors": ["snippet.c:67:9: error: expected declaration or statement at end of input", "snippet.c:67:9: error: expected declaration or statement at end of input"], "cmd": "gcc -std=c11 -fsyntax-only -x c snippet.c"}

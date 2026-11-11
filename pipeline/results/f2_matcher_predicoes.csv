@@ -1,0 +1,169 @@
+issue_id,model,authors_detected,matcher,cwe_hit,ident_hit
+v8:1/1a,gpt-4.1,True,True,"('hierarquia', 775, 772)",open
+v8:1/1a,gpt-5,False,True,None,open
+v8:1/1a,opus-4.1,False,True,None,open
+v8:1/1b,gpt-4.1,True,True,"('hierarquia', 367, 362)",open
+v8:1/1b,gpt-5,True,True,None,open
+v8:1/1b,opus-4.1,True,True,"('hierarquia', 367, 362)",open
+v8:3/29,gpt-4.1,True,True,"('igual', 20, 20)",
+v8:3/29,gpt-5,True,True,"('igual', 20, 20)",
+v8:3/29,opus-4.1,True,True,"('igual', 20, 20)",
+v8:4/101,gpt-4.1,False,True,"('igual', 20, 20)",
+v8:4/101,gpt-5,False,True,"('igual', 20, 20)",
+v8:4/101,opus-4.1,True,True,"('igual', 20, 20)",
+v8:5/63,gpt-4.1,True,True,"('igual', 20, 20)",
+v8:5/63,gpt-5,True,False,None,
+v8:5/63,opus-4.1,True,True,"('igual', 20, 20)",
+v8:6/8,gpt-4.1,True,True,"('igual', 190, 190)",abs
+v8:6/8,gpt-5,True,True,"('igual', 190, 190)",abs
+v8:6/8,opus-4.1,True,True,"('igual', 190, 190)",
+v8:7/39,gpt-4.1,True,True,"('igual', 20, 20)",
+v8:7/39,gpt-5,True,True,"('igual', 20, 20)",mean
+v8:7/39,opus-4.1,True,True,"('igual', 20, 20)",exam1
+v8:8/36,gpt-4.1,False,True,"('igual', 20, 20)",
+v8:8/36,gpt-5,False,True,"('igual', 20, 20)",
+v8:8/36,opus-4.1,False,True,"('igual', 20, 20)",
+v8:9/9,gpt-4.1,True,True,"('igual', 20, 20)",scanf
+v8:9/9,gpt-5,True,True,"('igual', 20, 20)",scanf
+v8:9/9,opus-4.1,False,True,"('igual', 20, 20)",scanf
+v8:10/42,gpt-4.1,True,False,None,
+v8:10/42,gpt-5,True,True,"('igual', 319, 319)",curl_easy_setopt
+v8:10/42,opus-4.1,True,True,"('hierarquia', 311, 319)",curl_easy_setopt
+v8:11/40,gpt-4.1,True,True,"('igual', 22, 22)",
+v8:11/40,gpt-5,True,True,"('igual', 22, 22)",WriteAllText
+v8:11/40,opus-4.1,True,True,"('igual', 22, 22)",
+v8:12/36,gpt-4.1,True,True,"('igual', 20, 20)",scanf
+v8:12/36,gpt-5,True,True,"('igual', 20, 20)",scanf
+v8:12/36,opus-4.1,True,True,"('igual', 20, 20)",scanf
+v8:13/49,gpt-4.1,False,True,"('igual', 20, 20)",scanf
+v8:13/49,gpt-5,True,True,"('igual', 20, 20)",scanf
+v8:13/49,opus-4.1,False,True,"('igual', 20, 20)",
+v8:14/14,gpt-4.1,True,True,"('hierarquia', 120, 119)",buffer
+v8:14/14,gpt-5,False,True,None,buffer
+v8:14/14,opus-4.1,True,True,"('igual', 119, 119)",buffer
+v8:14/63,gpt-4.1,False,True,"('hierarquia', 20, 129)",
+v8:14/63,gpt-5,False,True,"('hierarquia', 20, 129)",
+v8:14/63,opus-4.1,False,True,"('hierarquia', 20, 129)",
+v8:18/83,gpt-4.1,True,True,"('familia', 131, 120)",memcpy
+v8:18/83,gpt-5,True,True,"('hierarquia', 787, 120)",memcpy
+v8:18/83,opus-4.1,True,False,None,
+v8:20/16,gpt-4.1,True,True,"('igual', 78, 78)",system
+v8:20/16,gpt-5,True,True,"('igual', 78, 78)",system
+v8:20/16,opus-4.1,True,True,"('igual', 78, 78)",
+v8:22/7,gpt-4.1,True,True,"('igual', 20, 20)",read
+v8:22/7,gpt-5,True,True,None,read
+v8:22/7,opus-4.1,True,True,"('hierarquia', 1284, 20)",
+v8:23/9,gpt-4.1,True,True,"('igual', 120, 120)",
+v8:23/9,gpt-5,True,False,None,
+v8:23/9,opus-4.1,True,True,"('igual', 120, 120)",
+v8:48/23,gpt-4.1,True,True,None,open
+v8:48/23,gpt-5,True,True,None,open
+v8:48/23,opus-4.1,True,True,None,open
+v8:49/27,gpt-4.1,True,True,None,asctime
+v8:49/27,gpt-5,True,True,"('hierarquia', 200, 203)",asctime
+v8:49/27,opus-4.1,True,True,None,asctime
+v8:49/9,gpt-4.1,True,True,"('familia', 73, 61)",open
+v8:49/9,gpt-5,True,True,"('familia', 73, 61)",open
+v8:49/9,opus-4.1,True,True,"('familia', 22, 61)",
+v8:52/14,gpt-4.1,True,True,"('hierarquia', 120, 119)",buffer
+v8:52/14,gpt-5,False,True,None,buffer
+v8:52/14,opus-4.1,True,True,"('hierarquia', 120, 119)",buffer
+v8:52/42,gpt-4.1,False,True,"('hierarquia', 20, 129)",
+v8:52/42,gpt-5,False,True,"('hierarquia', 20, 129)",
+v8:52/42,opus-4.1,False,True,"('hierarquia', 20, 129)",
+v8:53/13,gpt-4.1,True,True,None,open
+v8:53/13,gpt-5,True,True,None,open
+v8:53/13,opus-4.1,True,True,"('igual', 20, 20)",
+v8:54/2,gpt-4.1,True,True,None,strlen
+v8:54/2,gpt-5,True,True,"('igual', 126, 126)",strlen
+v8:54/2,opus-4.1,True,True,"('familia', 120, 126)",strlen
+v8:61/1,gpt-4.1,True,True,"('hierarquia', 457, 665)",data
+v8:61/1,gpt-5,True,True,"('hierarquia', 457, 665)",
+v8:61/1,opus-4.1,True,True,"('igual', 665, 665)",data
+v8:62/19,gpt-4.1,True,True,"('igual', 401, 401)",arr
+v8:62/19,gpt-5,True,True,"('igual', 401, 401)",arr
+v8:62/19,opus-4.1,True,True,None,stackSize
+v10:1/65,gpt-4.1,False,False,None,
+v10:1/65,gpt-5,True,False,None,
+v10:1/65,opus-4.1,False,False,None,
+v10:1/57,gpt-4.1,True,True,"('hierarquia', 120, 119)",buffer
+v10:1/57,gpt-5,False,True,None,buffer
+v10:1/57,opus-4.1,True,True,"('hierarquia', 120, 119)",BUFFER_SIZE
+v10:1/132,gpt-4.1,True,True,"('familia', 362, 663)",strtok
+v10:1/132,gpt-5,True,True,"('familia', 362, 663)",strtok
+v10:1/132,opus-4.1,False,True,"('familia', 367, 663)",
+v10:2/7,gpt-4.1,True,False,None,
+v10:2/7,gpt-5,True,False,None,
+v10:2/7,opus-4.1,True,False,None,
+v10:3/11,gpt-4.1,True,True,"('hierarquia', 126, 119)",
+v10:3/11,gpt-5,True,True,"('igual', 665, 665)",
+v10:3/11,opus-4.1,True,True,"('hierarquia', 120, 119)",
+v10:3/7,gpt-4.1,True,True,"('hierarquia', 126, 119)",_id
+v10:3/7,gpt-5,True,True,"('igual', 665, 665)",are
+v10:3/7,opus-4.1,True,True,"('hierarquia', 120, 119)",_id
+v10:4/78,gpt-4.1,False,True,None,open
+v10:4/78,gpt-5,False,True,None,open
+v10:4/78,opus-4.1,False,False,None,
+v10:5/25,gpt-4.1,True,True,None,open
+v10:5/25,gpt-5,True,True,None,open
+v10:5/25,opus-4.1,True,False,None,
+v10:6/78,gpt-4.1,False,True,None,open
+v10:6/78,gpt-5,False,True,None,open
+v10:6/78,opus-4.1,False,True,None,open
+v10:7/81,gpt-4.1,True,True,"('igual', 120, 120)",strcpy
+v10:7/81,gpt-5,True,True,"('igual', 120, 120)",strcpy
+v10:7/81,opus-4.1,True,True,"('igual', 120, 120)",strcpy
+v10:8/82,gpt-4.1,True,True,"('igual', 120, 120)",strcpy
+v10:8/82,gpt-5,True,True,"('igual', 120, 120)",strcpy
+v10:8/82,opus-4.1,True,True,"('igual', 120, 120)",strcpy
+v10:9/23,gpt-4.1,True,True,"('igual', 20, 20)",malloc
+v10:9/23,gpt-5,True,True,"('igual', 20, 20)",malloc
+v10:9/23,opus-4.1,True,True,"('igual', 20, 20)",malloc
+v10:10/37,gpt-4.1,True,True,"('igual', 20, 20)",malloc
+v10:10/37,gpt-5,True,True,"('igual', 20, 20)",malloc
+v10:10/37,opus-4.1,True,True,"('igual', 20, 20)",malloc
+v10:11/11,gpt-4.1,True,True,"('hierarquia', 916, 328)",
+v10:11/11,gpt-5,True,True,"('hierarquia', 759, 328)",
+v10:11/11,opus-4.1,True,True,"('hierarquia', 759, 328)",
+v10:12/23,gpt-4.1,True,True,"('hierarquia', 367, 362)",fopen
+v10:12/23,gpt-5,True,True,None,fopen
+v10:12/23,opus-4.1,True,True,None,fopen
+v10:12/25,gpt-4.1,True,True,"('igual', 252, 252)",
+v10:12/25,gpt-5,True,True,"('igual', 252, 252)",fclose
+v10:12/25,opus-4.1,True,True,"('igual', 252, 252)",fclose
+v10:13/13,gpt-4.1,True,True,"('igual', 20, 20)",
+v10:13/13,gpt-5,True,True,"('igual', 20, 20)",shmget
+v10:13/13,opus-4.1,True,True,"('igual', 20, 20)",
+v10:15/17,gpt-4.1,True,True,"('igual', 252, 252)",ftell
+v10:15/17,gpt-5,True,True,"('igual', 252, 252)",ftell
+v10:15/17,opus-4.1,True,True,"('igual', 252, 252)",ftell
+v10:19/18,gpt-4.1,True,True,"('igual', 20, 20)",infile
+v10:19/18,gpt-5,True,True,"('igual', 20, 20)",
+v10:19/18,opus-4.1,True,True,"('igual', 20, 20)",
+v10:23/27,gpt-4.1,True,True,"('igual', 190, 190)",
+v10:23/27,gpt-5,True,True,"('igual', 190, 190)",product
+v10:23/27,opus-4.1,True,True,"('igual', 190, 190)",product
+v10:27/83,gpt-4.1,False,False,None,
+v10:27/83,gpt-5,False,False,None,
+v10:27/83,opus-4.1,True,False,None,
+v10:28/7,gpt-4.1,False,False,None,
+v10:28/7,gpt-5,False,False,None,
+v10:28/7,opus-4.1,False,False,None,
+v10:31/53,gpt-4.1,True,True,"('familia', 338, 327)",srand
+v10:31/53,gpt-5,True,True,"('familia', 338, 327)",srand
+v10:31/53,opus-4.1,True,True,"('familia', 338, 327)",srand
+v10:39/61,gpt-4.1,True,True,"('igual', 120, 120)",strncpy
+v10:39/61,gpt-5,True,True,"('familia', 805, 120)",strncpy
+v10:39/61,opus-4.1,True,True,"('igual', 120, 120)",strncpy
+v10:40/8,gpt-4.1,True,False,None,
+v10:40/8,gpt-5,True,True,"('hierarquia', 367, 362)",fopen
+v10:40/8,opus-4.1,True,True,"('hierarquia', 367, 362)",fopen
+v10:42/15,gpt-4.1,True,True,None,open
+v10:42/15,gpt-5,True,True,"('igual', 362, 362)",open
+v10:42/15,opus-4.1,True,True,"('igual', 362, 362)",open
+v10:43/4,gpt-4.1,True,False,None,
+v10:43/4,gpt-5,True,True,None,open
+v10:43/4,opus-4.1,True,False,None,
+v10:47/36,gpt-4.1,True,True,"('familia', 338, 327)",srand
+v10:47/36,gpt-5,True,True,"('familia', 338, 327)",srand
+v10:47/36,opus-4.1,True,True,"('familia', 338, 327)",srand
