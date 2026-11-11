@@ -1,4 +1,4 @@
-"""Valores canonicos do artigo (Apendice A do PLANO_EXECUCAO.md; Tabelas 12-14 de Belozerov et al. 2026).
+"""Valores canonicos do artigo (Tabelas 12-14 de Belozerov et al. 2026).
 
 Estes valores sao usados SO para validar o gabarito reconstruido a partir da planilha dos autores.
 Nenhum agente do pipeline os recebe.

@@ -1,6 +1,6 @@
 """Runner: fila por arquivo, reaproveitamento do A1, checkpoint por cache, retomada e guarda de horas de GPU.
 
-Configuracoes (PLANO_EXECUCAO.md, Secao 3):
+Configuracoes:
   B0   prompt original do artigo (1 chamada) + extracao dos achados
   B1   so A1
   C1   A1 -> A3a

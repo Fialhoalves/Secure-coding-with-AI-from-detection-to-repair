@@ -28,5 +28,4 @@ desktop.ini
 
 # Saídas baixadas do Kaggle e arquivos gerados localmente
 saidas/
-apresentacao/fonte/*.html
 relatorio/*.html

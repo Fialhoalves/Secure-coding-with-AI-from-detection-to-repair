@@ -5,7 +5,7 @@ Saidas (pipeline/results/): f6_findings.csv (cada achado aceito e sua classe), m
 
 Uso:  pipeline\\.venv\\Scripts\\python.exe -I pipeline\\src\\f7_analyze.py [--rep main] [--n-boot 2000]
 
-Definicoes: Secoes 6 e 7 do PLANO_EXECUCAO.md. Regra principal = linha +-3 e CWE compativel; "uncertain" do verificador = rejeitado.
+Regra principal = linha +-3 e CWE compativel; "uncertain" do verificador = rejeitado.
 """
 from __future__ import annotations
 

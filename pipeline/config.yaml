@@ -1,4 +1,4 @@
-# Configuracao do experimento (PLANO_EXECUCAO.md, F3). Caminhos relativos a raiz do projeto
+# Configuracao do experimento. Caminhos relativos a raiz do projeto
 # (ou a --root); cache e runs podem ser redirecionados com --work-dir (no Kaggle: /kaggle/working).
 paths:
   raw_root: pipeline/data/raw/MSc_DataEngineering_Results

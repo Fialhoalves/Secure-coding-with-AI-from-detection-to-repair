@@ -17,6 +17,3 @@ pytest==9.2.0
 
 # Para enviar kernels e baixar as saídas do Kaggle
 kaggle==2.2.5
-
-# Só para o guia da apresentação (miniaturas dos slides)
-pypdfium2==5.15.2

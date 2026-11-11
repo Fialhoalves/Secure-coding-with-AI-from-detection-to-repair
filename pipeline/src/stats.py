@@ -1,4 +1,4 @@
-"""Estatistica (PLANO_EXECUCAO.md, Secao 7): McNemar exato, Q de Cochran, correcao de Holm e bootstrap por cluster
+"""Estatistica: McNemar exato, Q de Cochran, correcao de Holm e bootstrap por cluster
 (reamostrando arquivos). Funcoes puras, testaveis com fixtures pequenas."""
 from __future__ import annotations
 

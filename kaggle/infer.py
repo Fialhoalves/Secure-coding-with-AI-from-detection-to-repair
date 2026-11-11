@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """F0 - notebook de inferencia (Kaggle). Custo financeiro zero.
 
-O que faz (ver PLANO_EXECUCAO.md, F0 item 3):
+O que faz:
   1. Instala as ferramentas do A3b: cppcheck (apt), flawfinder e semgrep (pip, venv isolado);
      confere gcc/g++.
   2. Instala o Ollama.

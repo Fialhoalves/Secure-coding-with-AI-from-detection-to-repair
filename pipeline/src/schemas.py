@@ -1,4 +1,4 @@
-"""Saidas estruturadas dos agentes (PLANO_EXECUCAO.md, Secao 4). Validadas com Pydantic; o JSON schema
+"""Saidas estruturadas dos agentes. Validadas com Pydantic; o JSON schema
 (sem $ref) vai na requisicao ao Ollama."""
 from __future__ import annotations
 

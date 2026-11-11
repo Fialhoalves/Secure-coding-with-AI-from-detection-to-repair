@@ -1,4 +1,4 @@
-"""Metricas (PLANO_EXECUCAO.md, Secao 6). Funcoes puras sobre os resultados em runs/ e o gabarito.
+"""Metricas. Funcoes puras sobre os resultados em runs/ e o gabarito.
 
 Conjunto rotulado pelos autores: 56 issues reais + 85 falsos alarmes conhecidos. Uma configuracao ACUSA um local quando
 algum achado aceito casa com ele (arquivo, linha a +-3, CWE compativel; ver matching.finding_matches_issue).

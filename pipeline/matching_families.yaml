@@ -1,4 +1,4 @@
-# Familias minimas de CWE consideradas compativeis entre si (PLANO_EXECUCAO.md, F6 item 1).
+# Familias minimas de CWE consideradas compativeis entre si.
 # Alem destas, dois CWEs sao compativeis se forem iguais ou tiverem relacao ancestral/descendente na
 # CWE Research View 1000 (sem contar os 10 "Pillars", genericos demais; ver cwe.py).
 families:

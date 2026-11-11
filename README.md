@@ -12,9 +12,6 @@ Projeto da disciplina TAES (Centro de Informática, UFPE, 2026). O trabalho tem 
 | Documento | Onde |
 |---|---|
 | Relatório final | [`relatorio/RELATORIO.pdf`](relatorio/RELATORIO.pdf) ([fonte em Markdown](relatorio/RELATORIO.md)) |
-| Resumo do projeto (material de estudo do grupo, 14 páginas) | [`Resumo_do_projeto.pdf`](Resumo_do_projeto.pdf) |
-| Slides e guia da apresentação | [`apresentacao/`](apresentacao/) |
-| Plano do experimento (hipóteses, desenho, métricas) | [`PLANO_EXECUCAO.md`](PLANO_EXECUCAO.md) |
 | Diário de execução (cada decisão, hash dos prompts, horas de GPU) | [`pipeline/DIARIO.md`](pipeline/DIARIO.md) |
 | Auditoria do artigo | [`pipeline/results/auditoria_artigo.md`](pipeline/results/auditoria_artigo.md) |
 | Todas as métricas e testes | [`pipeline/results/f7_resultados.md`](pipeline/results/f7_resultados.md) |
@@ -27,7 +24,7 @@ Este projeto é **derivado** do artigo de Belozerov, Barclay e Sami ([DOI](https
 |---|---|
 | A pergunta de partida: LLMs detectam e corrigem vulnerabilidades em código de conversas reais? | A auditoria dos números do artigo, recalculados a partir dos dados dos autores, sem LLM |
 | O corpus: trechos do DevGPT, saídas dos 4 scanners estáticos e respostas dos modelos comerciais | O pipeline de 3 agentes (detector, corretor e verificador adversarial) e as 6 configurações do experimento |
-| Os rótulos manuais: 56 issues reais e 85 falsos alarmes conhecidos | Precisão, recall e testes estatísticos sobre esses rótulos, o relatório, os slides e o código deste repositório |
+| Os rótulos manuais: 56 issues reais e 85 falsos alarmes conhecidos | Precisão, recall e testes estatísticos sobre esses rótulos, o relatório e o código deste repositório |
 
 ## Equipe
 
@@ -42,9 +39,7 @@ Projeto da disciplina TAES, Centro de Informática, UFPE (novembro de 2026):
 
 ```
 .
-├── PLANO_EXECUCAO.md          plano: hipóteses H1–H5, configurações, métricas, fases F0–F8
 ├── artigo.pdf                 artigo analisado, cópia sem alterações (CC BY 4.0)
-├── Resumo_do_projeto.pdf      resumo do projeto, do começo ao fim
 ├── requirements.txt           dependências Python do ambiente local
 ├── pipeline/
 │   ├── config.yaml            modelos (tag e digest), parâmetros de inferência, prompts, repetições
@@ -64,8 +59,7 @@ Projeto da disciplina TAES, Centro de Informática, UFPE (novembro de 2026):
 │   ├── import_outputs.py      traz as saídas de um kernel para pipeline/
 │   ├── <job>/                 scripts exatamente como foram enviados ao Kaggle (pilot, f5a, f5b, f5var, ...)
 │   └── infer.py               kernel da F0 (teste dos modelos na T4)
-├── relatorio/                 relatório (Markdown e PDF) e o conversor md2html.py
-└── apresentacao/              slides (.pptx e .pdf), guia de apresentação e estudo, e os geradores em fonte/
+└── relatorio/                 relatório (Markdown e PDF) e o conversor md2html.py
 ```
 
 ## Instalação
@@ -121,7 +115,7 @@ No Windows, algumas pastas têm caminho com mais de 260 caracteres. Se o checkou
 
 ## 3. Executar o experimento do zero
 
-As fases seguem o `PLANO_EXECUCAO.md`. As fases locais (F1, F2, F6–F8) não usam LLM. A inferência (F4 e F5) roda no Kaggle: o projeto teve custo financeiro zero.
+As fases são numeradas de F0 a F8 e dão nome aos scripts de `pipeline/src/` (`f2_audit.py`, `f4_analyze.py`, `f7_analyze.py`). As fases locais (F1, F2, F6–F8) não usam LLM. A inferência (F4 e F5) roda no Kaggle: o projeto teve custo financeiro zero.
 
 ### 3.1 Fases locais antes da inferência
 
@@ -191,7 +185,7 @@ PY -I pipeline/src/runner.py --select all --reps main --det-url http://127.0.0.1
 
 Para reproduzir os números, use os mesmos modelos. O `config.yaml` registra o digest de cada um, e o kernel confere o digest antes de rodar. O detector com cache KV f16 e contexto de 16 mil tokens precisa de uma GPU de 16 GB, e o verificador, de outra.
 
-### 3.5 Análise, relatório e apresentação
+### 3.5 Análise e relatório
 
 ```bash
 PY -I pipeline/src/f4_analyze.py --out saidas/pilot   # piloto (F4)
@@ -200,21 +194,12 @@ PY -I pipeline/src/f8_figures.py                      # F8: figuras
 PY -I relatorio/md2html.py relatorio/RELATORIO.md relatorio/RELATORIO.html   # depois: abrir no navegador e imprimir em PDF
 ```
 
-Os slides são gerados por `apresentacao/fonte/build_slides.js`, que precisa do Node.js 18 ou superior. Para trocar os nomes dos apresentadores, edite `NOMES` no início do arquivo.
-
-```bash
-cd apresentacao/fonte && npm install && cd ../..
-node apresentacao/fonte/build_slides.js --html apresentacao/fonte/slides.html   # .pptx e um HTML com o mesmo layout
-```
-
-O PDF dos slides é a impressão desse HTML: abra-o no Edge ou no Chrome e imprima, ou use `msedge --headless --print-to-pdf=...`. O guia é montado com `apresentacao/fonte/build_guia.py`, a partir de `guia.md`, `notas.json` e do PDF dos slides.
-
 ## Reprodutibilidade
 
 - **Prompts congelados.** Os prompts foram fixados antes da execução principal, e o hash de cada um está no `DIARIO.md`. A versão do prompt faz parte da chave do cache: mudar um prompt gera chamadas novas.
 - **Cache.** Cada chamada é guardada em `pipeline/cache/` por uma chave SHA-256 que inclui modelo, digest, prompt, mensagens, temperatura, seed e schema. Repetir uma execução com a mesma configuração reaproveita as respostas sem chamar o modelo. Os arquivos `pipeline/results/f5/taes_outputs_<job>.tar.gz` guardam a saída completa de cada kernel.
 - **Parâmetros.** A execução principal usa `temperature=0` e `seed=0`. Mesmo assim, respostas longas não são 100% determinísticas; por isso existe o estudo de variância.
-- **Decisões.** Todas as decisões, os desvios do plano e os critérios fixados antes de cada análise estão em `pipeline/DIARIO.md`.
+- **Decisões.** Todas as decisões e os critérios fixados antes de cada análise estão em `pipeline/DIARIO.md`.
 
 ## Créditos e licenças de terceiros
 
@@ -223,7 +208,6 @@ O PDF dos slides é a impressão desse HTML: abra-o no Edge ou no Chrome e impri
 - **DevGPT:** conjunto público de conversas de desenvolvedores com o ChatGPT (Xiao, Treude, Hata e Matsumoto, MSR 2024), de onde vêm os trechos de código: <https://github.com/NAIST-SE/DevGPT>.
 - **CWE:** Common Weakness Enumeration, © The MITRE Corporation; usado conforme os termos de uso do CWE.
 - **Modelos:** `qwen2.5-coder:14b` (Alibaba, Qwen) e `gpt-oss:20b` (OpenAI), servidos pelo Ollama.
-- **Identidade visual:** os slides seguem o modelo de apresentação do Centro de Informática da UFPE.
 
 ## Como citar o artigo original
 
