@@ -15,7 +15,7 @@ from pathlib import Path
 
 SEV_ORDER = {"note": 0, "warning": 1, "error": 2}
 FLAWFINDER_BIN = "flawfinder"
-# p/default reproduz as regras de semgrep que os autores usaram (ex.: c.lang.security.insecure-use-scanf-fn); p/c nao (F3, tools_check). O pacote e baixado do registro a cada chamada (nao fica fixado): registrar a data e a versao no DIARIO.
+# p/default reproduz as regras de semgrep que os autores usaram (ex.: c.lang.security.insecure-use-scanf-fn); p/c nao (F3, tools_check). O pacote e baixado do registro a cada chamada (nao fica fixado): registrar a data e a versao ao reportar resultados.
 SEMGREP_CONFIG = os.environ.get("TAES_SEMGREP_CONFIG", "p/default")
 
 

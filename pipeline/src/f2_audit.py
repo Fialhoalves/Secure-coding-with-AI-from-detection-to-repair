@@ -1,5 +1,5 @@
 """F2 item 4 - auditoria do artigo: recalcula, a partir das tabelas do proprio PDF e dos dados dos autores,
-as inconsistencias listadas no Apendice B do plano. Gera results/auditoria_artigo.md. Nao chama LLM.
+as inconsistencias do artigo identificadas na revisao das tabelas. Gera results/auditoria_artigo.md. Nao chama LLM.
 
 Uso:  pipeline\\.venv\\Scripts\\python.exe -I pipeline\\src\\f2_audit.py
 """
@@ -240,14 +240,14 @@ def main() -> int:
         swap.append(f"- {a}: planilha dos autores = CWE {pc.loc[a, 'cwe_sheet']} (flawfinder, 'Statically-sized arrays...'); Tabela 14 do artigo = CWE {pc.loc[a, 'cwe_paper']}.")
         swap.append(f"- {b}: planilha = CWE {pc.loc[b, 'cwe_sheet']} (cppcheck, 'Improper Initialisation'); Tabela 14 = CWE {pc.loc[b, 'cwe_paper']}.")
     section("10. (achado novo) CWEs trocadas na Tabela 14", "CONFIRMADO",
-            ["Das 56 CWEs, 5 diferem entre a planilha e as Tabelas 13/14 (ver DIARIO, F1). A mais clara e uma troca entre dois issues do mesmo arquivo:", *swap,
+            ["Das 56 CWEs, 5 diferem entre a planilha e as Tabelas 13/14 (F1). A mais clara e uma troca entre dois issues do mesmo arquivo:", *swap,
              "O tipo de scanner e a descricao da regra concordam com a planilha; as CWEs da Tabela 14 parecem trocadas."])
 
     pos_per = {s: sum(1 for r_ in files if r_["snapshot"] == s and r_["class"] == "positive") for s in ("v8", "v10")}
     n_sel = {s: sum(1 for r_ in files if r_["snapshot"] == s and r_["class"] in ("positive", "negative")) for s in ("v8", "v10")}
     unk_neg = sum(1 for r_ in files if r_["class"] == "negative" and r_["origin"] == "unknown")
     section("11. Verificacoes que NAO acharam problema", "CONSISTENTE",
-            [f"- Tabela 12: 63 + 51 = 114 arquivos; os dados dao {n_sel['v8']} + {n_sel['v10']} (a pasta File_02 de v8 esta no repositorio mas fora da analise; ver DIARIO, F1).",
+            [f"- Tabela 12: 63 + 51 = 114 arquivos; os dados dao {n_sel['v8']} + {n_sel['v10']} (a pasta File_02 de v8 esta no repositorio mas fora da analise).",
              f"- Tabela 12: 24 + 24 = 48 arquivos com issue; os dados dao {pos_per['v8']} + {pos_per['v10']}.",
              "- Tabela 12: 73 + 68 = 141 deteccoes de scanner; a planilha tem 74 + 68 = 142, e a diferenca e exatamente o item removido v8:2/14.",
              "- Contadores detectadas/corrigidas por modelo (Tabela 12) = soma das Tabelas 13 e 14 (46/42, 44/44, 45/43).",

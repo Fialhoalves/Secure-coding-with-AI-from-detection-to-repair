@@ -28,7 +28,7 @@ EXPECTED_COUNTS = {
 # Issues que nenhum dos 3 modelos detectou.
 NEVER_DETECTED = ("v8:8/36", "v8:14/63", "v8:52/42", "v10:4/78", "v10:6/78", "v10:28/7")
 
-# Divergencia conhecida planilha x artigo (ver DIARIO): "Yes" na planilha de 2025, ausente da lista do artigo.
+# Divergencia conhecida planilha x artigo: "Yes" na planilha de 2025, ausente da lista do artigo.
 KNOWN_DIVERGENT = ("v8:2/14",)
 EXPECTED_FILES = {"positive": 48, "negative": 66, "excluded": 1}
 EXPECTED_SHEET_ROWS = {"v8": 74, "v10": 68}

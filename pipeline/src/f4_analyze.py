@@ -160,7 +160,7 @@ def fix_validation_section(out: Path, gt: mt.GT, labels: pd.DataFrame) -> list[s
     variants = {
         "A3b = valid": ok.verdict.eq("valid"),
         "A3b valid ou partial": ok.verdict.isin(["valid", "partial"]),
-        "A3b valid e criterios 2-4 sem falha (plano)": ok.verdict.eq("valid") & nf(ok.rule_gone) & nf(ok.compiles) & nf(ok.no_new_warning),
+        "A3b valid e criterios 2-4 sem falha (criterio de aceite)": ok.verdict.eq("valid") & nf(ok.rule_gone) & nf(ok.compiles) & nf(ok.no_new_warning),
         "so ferramentas (regra sumiu, compila, sem novo warning)": ok.rule_gone.eq(True) & nf(ok.compiles) & nf(ok.no_new_warning),
         "todos os patches = corrigido (linha de base)": pd.Series(True, index=ok.index),
     }
@@ -260,7 +260,7 @@ def calibration_section(out: Path, gt: mt.GT) -> list[str]:
 
 # --------------------------------------------------------------------------- 6. projecao de horas de GPU
 def projection_section(out: Path, n_files_total: int = 114, weekly_quota: float = 30.0) -> list[str]:
-    """Projeta as horas de GPU da execucao completa a partir dos tempos reais do piloto (PARADA 2).
+    """Projeta as horas de GPU da execucao completa a partir dos tempos reais do piloto.
 
     Execucao principal: tempo de parede da etapa 'pipeline' do piloto / n. de arquivos x 114.
     Cada repeticao do estudo de variancia (so B1 e C3): o tempo da principal x (carga do servidor mais ocupado em B1+C3) /

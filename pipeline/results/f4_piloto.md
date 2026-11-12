@@ -81,7 +81,7 @@ Casos julgados: 56 de 56. Rotulo dos autores ('Was issue fixed', GPT-4.1, Tabela
 |:--------------------------------------------------------|----:|---------:|--------:|-----:|-----:|-----:|-----:|
 | A3b = valid                                             |  56 |    0.661 |   0.283 |   27 |    4 |   15 |   10 |
 | A3b valid ou partial                                    |  56 |    0.768 |   0.422 |   34 |    5 |    8 |    9 |
-| A3b valid e criterios 2-4 sem falha (plano)             |  56 |    0.571 |   0.273 |   18 |    0 |   24 |   14 |
+| A3b valid e criterios 2-4 sem falha (criterio de aceite)|  56 |    0.571 |   0.273 |   18 |    0 |   24 |   14 |
 | so ferramentas (regra sumiu, compila, sem novo warning) |  56 |    0.482 |   0.134 |   15 |    2 |   27 |   12 |
 | todos os patches = corrigido (linha de base)            |  56 |    0.75  |   0     |   42 |   14 |    0 |    0 |
 

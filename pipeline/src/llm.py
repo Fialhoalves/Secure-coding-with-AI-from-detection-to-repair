@@ -15,7 +15,7 @@ from cache import DiskCache, make_key
 from prompts import Prompt
 from schemas import json_schema_of
 
-MAX_SCHEMA_RETRIES = 2          # plano: "repita ate 2 vezes e registre a falha"
+MAX_SCHEMA_RETRIES = 2          # repete ate 2 vezes e registra a falha
 MAX_TOKENS_CAP = 16000
 REFUSAL = re.compile(r"\b(i can'?t (help|assist)|i cannot (help|assist)|i can not|i'?m sorry|i am sorry|unable to (assist|help|comply)|"
                      r"cannot comply|against my (guidelines|policy))\b", re.I)
@@ -229,7 +229,7 @@ class StructuredCaller:
                    "completion_tokens": raw.completion_tokens}
             rec["attempt_log"].append(log)
             if raw.finish_reason == "length" and cur_max < MAX_TOKENS_CAP:
-                cur_max = min(MAX_TOKENS_CAP, cur_max * 2)    # plano: se for 'length', repita com mais tokens
+                cur_max = min(MAX_TOKENS_CAP, cur_max * 2)    # se o corte for por 'length', repete com mais tokens
                 log["result"] = "length"
                 continue
             if model_cls is None:                              # texto livre (B0)

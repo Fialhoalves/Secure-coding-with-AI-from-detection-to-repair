@@ -26,7 +26,7 @@ HERE = Path(__file__).resolve().parent.parent          # .../pipeline
 DATA, RESULTS = HERE / "data", HERE / "results"
 RAW = DATA / "raw" / "MSc_DataEngineering_Results"
 
-# Regra congelada do matcher (ver DIARIO, F2). Edite SO aqui se a validacao pedir ajuste.
+# Regra congelada do matcher. Edite SO aqui se a validacao pedir ajuste.
 CHOSEN = "cwe+ident/prosa (ou)"
 
 
@@ -186,7 +186,7 @@ def main() -> int:
     best = grid_df.sort_values("kappa", ascending=False).iloc[0]
     md = ["# F2 - reanalise dos dados do artigo", "",
           f"**Validacao do matcher de texto livre: NAO atingiu a meta (kappa >= 0,7).** Melhor variante: "
-          f"`{best.variante}` com kappa = {best.kappa} (acordo {best.acordo}). A regra do plano "
+          f"`{best.variante}` com kappa = {best.kappa} (acordo {best.acordo}). A regra adotada "
           f"(`{CHOSEN}`) deu kappa = {grid_df[grid_df.variante == CHOSEN].iloc[0].kappa}.", "",
           "## Extracao de CWEs x planilha (v8)", "", *(f"- {k}: {v}" for k, v in ext_summary.items()), "",
           "## Validacao do matcher (variantes, 56 issues x 3 modelos = 168 pares)", "", grid_df.to_markdown(index=False), "",

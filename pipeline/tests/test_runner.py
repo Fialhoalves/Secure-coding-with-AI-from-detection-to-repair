@@ -1,5 +1,5 @@
 """Runner em dry-run (clientes e ferramentas simulados): nenhum modelo e chamado. Verifica a estrutura das configuracoes,
-as regras de desenho da Secao 3 (reaproveitamento do A1, mesma postura no A3, sem vazamento do gabarito), a retomada e a
+as regras de desenho do experimento (reaproveitamento do A1, mesma postura no A3, sem vazamento do gabarito), a retomada e a
 guarda de cota."""
 import json
 import re
@@ -42,7 +42,7 @@ def test_structure_and_invariants_between_configs(cfg, items):
         ids = [x["finding"]["id"] for x in b1["findings"]]
         assert b1["accepted"] == ids                                        # B1 aceita tudo o que o A1 achou
         assert set(c1["accepted"]) <= set(b1["accepted"])                   # o verificador so remove
-        assert c3["accepted"] == c1["accepted"]                             # regra 1: mesmo A1, mesmo A3a (cache compartilhado)
+        assert c3["accepted"] == c1["accepted"]                             # mesmo A1, mesmo A3a (cache compartilhado)
         assert set(c2["accepted"]) <= set(ids)
         n, n_conf = len(ids), len(c3["accepted"])
         assert b1["usage"]["calls"] == 1

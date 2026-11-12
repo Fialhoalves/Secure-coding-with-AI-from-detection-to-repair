@@ -57,7 +57,7 @@ def parse_cwes(*texts: str | None) -> list[int]:
 def classify_verdict(text: str | None) -> str:
     """'real' | 'not_real' | 'review' para a coluna 'Is this detect actual security problem?'.
 
-    Regra do plano (F1 item 3): comeca com 'Yes' -> real; comeca com 'No'/'Not', ou contem
+    Regra de classificacao (F1): comeca com 'Yes' -> real; comeca com 'No'/'Not', ou contem
     'not security issue' / 'not an issue' -> not_real; qualquer outro caso -> revisao manual.
     """
     t = norm_for_match(text)

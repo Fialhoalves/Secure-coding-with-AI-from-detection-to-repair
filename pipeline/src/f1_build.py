@@ -42,7 +42,7 @@ def build(raw_root: Path, ods: Path, pdf: Path, overrides_csv: Path) -> dict:
         for fdir in file_dirs(raw_root, snap):
             recs.append(build_file_record(raw_root, snap, fdir))
     per_snap = pd.Series([r["snapshot"] for r in recs]).value_counts().to_dict()
-    check("pastas File_XX", per_snap == {"v8": 64, "v10": 51}, f"obtido {per_snap} (Apendice A: 64 e 51)")
+    check("pastas File_XX", per_snap == {"v8": 64, "v10": 51}, f"obtido {per_snap} (referencia: 64 e 51)")
     check("codigo identico nos 3 modelos", all(r["code"]["identical_across_models"] for r in recs), "")
     by_file = {(r["snapshot"], r["file_number"]): r for r in recs}
 
@@ -108,7 +108,7 @@ def build(raw_root: Path, ods: Path, pdf: Path, overrides_csv: Path) -> dict:
             got = (int(p[f"{m}__detected"].sum()), int(p[f"{m}__fixed"].sum()))
             counts_ok &= got == EXPECTED_COUNTS[m][s]
             count_detail.append(f"{m}/{s}={got}")
-    check("contadores detectadas/corrigidas do artigo = Apendice A", counts_ok, "; ".join(count_detail))
+    check("contadores detectadas/corrigidas do artigo = valores de referencia", counts_ok, "; ".join(count_detail))
 
     # ---------------------------------------------------------------- combina planilha e artigo (CWE e origem)
     # CWE: uniao (planilha primeiro) das CWEs que os autores deram ao mesmo issue na planilha e na Tabela 13/14.
@@ -201,7 +201,7 @@ def build(raw_root: Path, ods: Path, pdf: Path, overrides_csv: Path) -> dict:
     labels = pd.DataFrame(label_rows)
     lr = labels[labels["status"] == "real"]
     nd = [i for i in CANONICAL_IDS if not lr[(lr["issue_id"] == i)]["detected"].any()]
-    check("issues nao detectadas por nenhum modelo = Apendice A", sorted(nd) == sorted(NEVER_DETECTED), f"{sorted(nd)}")
+    check("issues nao detectadas por nenhum modelo = valores de referencia", sorted(nd) == sorted(NEVER_DETECTED), f"{sorted(nd)}")
 
     # ---------------------------------------------------------------- saidas
     real = df[df["status"] == "real"].copy()

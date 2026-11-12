@@ -462,7 +462,7 @@ def variance_section(gt: mt.GT, hier, fams, n_boot: int, main_var: dict) -> tupl
 def h5_section(all_res: dict, gt: mt.GT, hier, fams, n_boot: int, rep: str = "main") -> tuple[list[str], list[dict]]:
     """H5 (opcional, exploratoria; fora da familia confirmatoria com Holm): verificador de OUTRA familia (C3, gpt-oss) x da MESMA familia do
     detector (C3-mf: A3a e A3b com o qwen). Mesmos arquivos e, gracas ao cache semeado, os mesmos achados do A1 (confere-se abaixo).
-    Criterio fixado no DIARIO antes do resultado: H5 apoiada se a taxa de falsos alarmes conhecidos do C3 for menor que a do C3-mf com IC
+    Criterio fixado antes do resultado: H5 apoiada se a taxa de falsos alarmes conhecidos do C3 for menor que a do C3-mf com IC
     pareado da diferenca abaixo de 0; o recall e reportado junto."""
     L = ["## H5 (exploratoria): verificador de outra familia (C3, gpt-oss) x da mesma familia do detector (C3-mf, qwen)", ""]
     res_mf = mt.load_runs(RUNS, "C3mf", rep)

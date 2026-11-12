@@ -13,7 +13,7 @@ def run_a1(ctx: Ctx, item: CodeItem) -> dict:
 
 
 def run_b0_response(ctx: Ctx, item: CodeItem) -> dict:
-    """Prompt original do artigo (Apendice C), literal, sem mensagem de sistema. Resposta em texto livre."""
+    """Prompt original do artigo, literal, sem mensagem de sistema. Resposta em texto livre."""
     p = ctx.prompts["b0"]
     msgs = p.messages(fence_lang=fence_lang(item), code=item.code)
     return ctx.caller.call(ctx.det, "b0_response", p, msgs, None, max_tokens=ctx.caps["b0_response"], **ctx.kw(ctx.det))

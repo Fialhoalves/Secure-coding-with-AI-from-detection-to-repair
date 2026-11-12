@@ -1,5 +1,5 @@
 """Verificadores adversariais. A3a e o A3 conjunto (C2) usam o MESMO prompt (a3_v1.md): so mudam o bloco do patch
-e a especificacao de saida (regra 2 da Secao 3). O A3b julga a correcao com a saida das ferramentas."""
+e a especificacao de saida (mesma postura de julgamento nos dois formatos). O A3b julga a correcao com a saida das ferramentas."""
 from __future__ import annotations
 
 from agents import CodeItem, Ctx, finding_json

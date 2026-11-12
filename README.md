@@ -1,6 +1,6 @@
 # Verificação adversarial com 3 agentes para reduzir falsos positivos na detecção de vulnerabilidades
 
-> **Projeto derivado de um artigo.** Este repositório é um trabalho acadêmico construído a partir do artigo *Secure coding with AI – from detection to repair*, de Vladislav Belozerov, Peter J. Barclay e Ashkan Sami ([Empirical Software Engineering 31:93, 2026](https://link.springer.com/article/10.1007/s10664-026-10812-8)). Os dados e os rótulos que usamos são dos autores; a auditoria, o pipeline e as conclusões são nossos. Veja [Origem do projeto](#origem-do-projeto) e [Créditos e licenças de terceiros](#créditos-e-licenças-de-terceiros).
+> **Projeto derivado de um artigo.** Este repositório é um trabalho acadêmico construído a partir do artigo *Secure coding with AI – from detection to repair*, de Vladislav Belozerov, Peter J. Barclay e Ashkan Sami ([Empirical Software Engineering 31:93, 2026](https://link.springer.com/article/10.1007/s10664-026-10812-8)). Os dados e os rótulos usados são dos autores do artigo; a auditoria, o pipeline e as conclusões são trabalho deste projeto. Veja [Origem do projeto](#origem-do-projeto) e [Créditos e licenças de terceiros](#créditos-e-licenças-de-terceiros).
 
 Projeto da disciplina TAES (Centro de Informática, UFPE, 2026). O trabalho tem duas partes:
 
@@ -12,15 +12,15 @@ Projeto da disciplina TAES (Centro de Informática, UFPE, 2026). O trabalho tem 
 | Documento | Onde |
 |---|---|
 | Relatório final | [`relatorio/RELATORIO.pdf`](relatorio/RELATORIO.pdf) ([fonte em Markdown](relatorio/RELATORIO.md)) |
-| Diário de execução (cada decisão, hash dos prompts, horas de GPU) | [`pipeline/DIARIO.md`](pipeline/DIARIO.md) |
+| Hash (SHA-256) dos prompts congelados | [`pipeline/prompts/HASHES.md`](pipeline/prompts/HASHES.md) |
 | Auditoria do artigo | [`pipeline/results/auditoria_artigo.md`](pipeline/results/auditoria_artigo.md) |
 | Todas as métricas e testes | [`pipeline/results/f7_resultados.md`](pipeline/results/f7_resultados.md) |
 
 ## Origem do projeto
 
-Este projeto é **derivado** do artigo de Belozerov, Barclay e Sami ([DOI](https://doi.org/10.1007/s10664-026-10812-8)), que avaliou se LLMs (GPT-4.1, GPT-5 e Claude Opus 4.1) detectam e corrigem vulnerabilidades em código C, C++ e C# vindo de conversas reais de desenvolvedores com o ChatGPT. Os autores publicaram os dados do estudo, e foi isso que permitiu o nosso trabalho. Não temos vínculo com os autores, e eles não revisaram nem endossam este repositório.
+Este projeto é **derivado** do artigo de Belozerov, Barclay e Sami ([DOI](https://doi.org/10.1007/s10664-026-10812-8)), que avaliou se LLMs (GPT-4.1, GPT-5 e Claude Opus 4.1) detectam e corrigem vulnerabilidades em código C, C++ e C# vindo de conversas reais de desenvolvedores com o ChatGPT. Os autores publicaram os dados do estudo, o que viabilizou este trabalho. Não há vínculo com os autores, e eles não revisaram nem endossam este repositório.
 
-| Vem do artigo e dos dados dos autores | É contribuição nossa |
+| Vem do artigo e dos dados dos autores | É contribuição deste projeto |
 |---|---|
 | A pergunta de partida: LLMs detectam e corrigem vulnerabilidades em código de conversas reais? | A auditoria dos números do artigo, recalculados a partir dos dados dos autores, sem LLM |
 | O corpus: trechos do DevGPT, saídas dos 4 scanners estáticos e respostas dos modelos comerciais | O pipeline de 3 agentes (detector, corretor e verificador adversarial) e as 6 configurações do experimento |
@@ -44,14 +44,13 @@ Projeto da disciplina TAES, Centro de Informática, UFPE (novembro de 2026):
 ├── pipeline/
 │   ├── config.yaml            modelos (tag e digest), parâmetros de inferência, prompts, repetições
 │   ├── matching_families.yaml famílias de CWE usadas na regra de correspondência
-│   ├── prompts/               prompts congelados dos agentes (a1_v2, a2_v1, a3_v1, a3b_v1, b0_paper, b0_extract_v1)
+│   ├── prompts/               prompts congelados dos agentes (a1_v2, a2_v1, a3_v1, a3b_v1, b0_paper, b0_extract_v1) e HASHES.md
 │   ├── src/                   código: agentes, runner, ferramentas do A3b, métricas e estatística, scripts por fase
 │   ├── tests/                 158 testes automáticos (pytest)
 │   ├── data/                  gabarito derivado dos dados dos autores (gt_issues.csv, gt_scanner_fp.csv, ...) e CWE-1000
 │   ├── runs/                  saída do pipeline por configuração e repetição: runs/<config>/<rep>/<arquivo>.json
 │   ├── cache/                 respostas brutas dos modelos (chave SHA-256 da chamada)
-│   ├── results/               métricas, testes, figuras, auditoria, extrações do artigo, relatórios dos kernels (f5/)
-│   └── DIARIO.md              diário de execução
+│   └── results/               métricas, testes, figuras, auditoria, extrações do artigo, relatórios dos kernels (f5/)
 ├── kaggle/
 │   ├── run/run.py             modelo de kernel (sobe o Ollama, roda o job, empacota as saídas)
 │   ├── make_job.py            gera kaggle/<job>/ a partir do modelo, com os parâmetros de cada job
@@ -196,14 +195,14 @@ PY -I relatorio/md2html.py relatorio/RELATORIO.md relatorio/RELATORIO.html   # d
 
 ## Reprodutibilidade
 
-- **Prompts congelados.** Os prompts foram fixados antes da execução principal, e o hash de cada um está no `DIARIO.md`. A versão do prompt faz parte da chave do cache: mudar um prompt gera chamadas novas.
+- **Prompts congelados.** Os prompts foram fixados antes da execução principal, e o hash de cada um está em `pipeline/prompts/HASHES.md`. A versão do prompt faz parte da chave do cache: mudar um prompt gera chamadas novas.
 - **Cache.** Cada chamada é guardada em `pipeline/cache/` por uma chave SHA-256 que inclui modelo, digest, prompt, mensagens, temperatura, seed e schema. Repetir uma execução com a mesma configuração reaproveita as respostas sem chamar o modelo. Os arquivos `pipeline/results/f5/taes_outputs_<job>.tar.gz` guardam a saída completa de cada kernel.
 - **Parâmetros.** A execução principal usa `temperature=0` e `seed=0`. Mesmo assim, respostas longas não são 100% determinísticas; por isso existe o estudo de variância.
-- **Decisões.** Todas as decisões e os critérios fixados antes de cada análise estão em `pipeline/DIARIO.md`.
+- **Critérios.** As hipóteses, a regra de correspondência e os critérios de decisão estão descritos no relatório (`relatorio/RELATORIO.md`). Os modelos, os digests e os parâmetros de inferência estão em `pipeline/config.yaml`.
 
 ## Créditos e licenças de terceiros
 
-- **Artigo (base deste trabalho):** Belozerov, V.; Barclay, P. J.; Sami, A. *Secure coding with AI – from detection to repair*. Empirical Software Engineering 31:93 (2026). DOI: [10.1007/s10664-026-10812-8](https://doi.org/10.1007/s10664-026-10812-8). Versão em preprint: [arXiv:2504.20814](https://arxiv.org/abs/2504.20814). Publicado em acesso aberto sob a licença [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/). O `artigo.pdf` é uma cópia sem alterações. A auditoria, o pipeline, as figuras e as conclusões deste repositório são trabalho nosso, feito a partir do artigo e dos dados dos autores, e não representam a opinião deles.
+- **Artigo (base deste trabalho):** Belozerov, V.; Barclay, P. J.; Sami, A. *Secure coding with AI – from detection to repair*. Empirical Software Engineering 31:93 (2026). DOI: [10.1007/s10664-026-10812-8](https://doi.org/10.1007/s10664-026-10812-8). Versão em preprint: [arXiv:2504.20814](https://arxiv.org/abs/2504.20814). Publicado em acesso aberto sob a licença [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/). O `artigo.pdf` é uma cópia sem alterações. A auditoria, o pipeline, as figuras e as conclusões deste repositório são trabalho deste projeto, feito a partir do artigo e dos dados dos autores, e não representam a opinião deles.
 - **Dados dos autores:** repositório de resultados do estudo, <https://github.com/vlad2010/MSc_DataEngineering_Results>. Este repositório não inclui o clone. Inclui só arquivos derivados (gabarito, extrações e saídas do pipeline, que citam trechos do código analisado), para permitir a reprodução da análise.
 - **DevGPT:** conjunto público de conversas de desenvolvedores com o ChatGPT (Xiao, Treude, Hata e Matsumoto, MSR 2024), de onde vêm os trechos de código: <https://github.com/NAIST-SE/DevGPT>.
 - **CWE:** Common Weakness Enumeration, © The MITRE Corporation; usado conforme os termos de uso do CWE.

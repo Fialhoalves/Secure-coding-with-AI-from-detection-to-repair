@@ -1,6 +1,6 @@
 # F2 - reanalise dos dados do artigo
 
-**Validacao do matcher de texto livre: NAO atingiu a meta (kappa >= 0,7).** Melhor variante: `cwe+ident/prosa (e)` com kappa = 0.304 (acordo 0.637). A regra do plano (`cwe+ident/prosa (ou)`) deu kappa = 0.169.
+**Validacao do matcher de texto livre: NAO atingiu a meta (kappa >= 0,7).** Melhor variante: `cwe+ident/prosa (e)` com kappa = 0.304 (acordo 0.637). A regra adotada (`cwe+ident/prosa (ou)`) deu kappa = 0.169.
 
 ## Extracao de CWEs x planilha (v8)
 

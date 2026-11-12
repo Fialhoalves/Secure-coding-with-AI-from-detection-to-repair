@@ -38,7 +38,7 @@ DETECTOR_CANDIDATES = ["qwen2.5-coder:14b"]
 VERIFIER_CANDIDATES = ["gpt-oss:20b", "gemma3:12b"]  # o segundo so e usado se o primeiro falhar
 CONTEXT_LENGTH = 16384
 # Configuracoes (tipo do cache KV, NUM_PARALLEL) a testar em cada papel.
-# "first_fit": usa a primeira que cabe 100% na GPU (regra do plano). "best": testa todas e escolhe a
+# "first_fit": usa a primeira que cabe 100% na GPU (regra adotada). "best": testa todas e escolhe a
 # de maior vazao agregada medida (o detector nao cabe a 4 em paralelo com cache KV f16 na T4).
 DETECTOR_CONFIGS = [("f16", 1), ("q8_0", 2), ("q8_0", 3), ("q8_0", 4)]
 VERIFIER_CONFIGS = [("f16", 4), ("f16", 2), ("f16", 1)]
@@ -540,7 +540,7 @@ def main():
     else:
         install_tools()
 
-    # criterios de aceite da F0 (itens "Aceite" do plano)
+    # criterios de aceite da F0
     steps = REPORT["steps"]
     tools = (steps.get("ferramentas") or {}).get("result") or {}
     sm = (steps.get("servidores_e_teste_de_fumaca") or {}).get("result") or {}

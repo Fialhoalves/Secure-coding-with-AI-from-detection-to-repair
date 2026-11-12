@@ -131,7 +131,7 @@ Finding 4 (p. 23): 'approximately 78% accuracy in both vulnerability detection a
 
 **Veredito: CONFIRMADO**
 
-Das 56 CWEs, 5 diferem entre a planilha e as Tabelas 13/14 (ver DIARIO, F1). A mais clara e uma troca entre dois issues do mesmo arquivo:
+Das 56 CWEs, 5 diferem entre a planilha e as Tabelas 13/14 (F1). A mais clara e uma troca entre dois issues do mesmo arquivo:
 - v10:3/7: planilha dos autores = CWE 119|120 (flawfinder, 'Statically-sized arrays...'); Tabela 14 do artigo = CWE 665.
 - v10:3/11: planilha = CWE 665 (cppcheck, 'Improper Initialisation'); Tabela 14 = CWE 119|120.
 O tipo de scanner e a descricao da regra concordam com a planilha; as CWEs da Tabela 14 parecem trocadas.
@@ -140,7 +140,7 @@ O tipo de scanner e a descricao da regra concordam com a planilha; as CWEs da Ta
 
 **Veredito: CONSISTENTE**
 
-- Tabela 12: 63 + 51 = 114 arquivos; os dados dao 63 + 51 (a pasta File_02 de v8 esta no repositorio mas fora da analise; ver DIARIO, F1).
+- Tabela 12: 63 + 51 = 114 arquivos; os dados dao 63 + 51 (a pasta File_02 de v8 esta no repositorio mas fora da analise).
 - Tabela 12: 24 + 24 = 48 arquivos com issue; os dados dao 24 + 24.
 - Tabela 12: 73 + 68 = 141 deteccoes de scanner; a planilha tem 74 + 68 = 142, e a diferenca e exatamente o item removido v8:2/14.
 - Contadores detectadas/corrigidas por modelo (Tabela 12) = soma das Tabelas 13 e 14 (46/42, 44/44, 45/43).

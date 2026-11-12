@@ -1,4 +1,4 @@
-"""Metricas da Secao 6 com um gabarito sintetico pequeno (calculavel a mao)."""
+"""Metricas do relatorio com um gabarito sintetico pequeno (calculavel a mao)."""
 import math
 
 import pytest
